@@ -6,15 +6,15 @@ redirect_from:
   - /md/
   - /markdown.html
 ---
-Complete list of my publications can be found on my Google Scholar profile.
+Complete list of my publications can be found on my Google Scholar [profile](https://scholar.google.com/citations?user=KvHIH9nZaiUC&hl=en).
 
 
-# Preprints - Work in Progress
+# Selected Preprints - Work in Progress
 * Lu A, Thompson M, Gordon MG, Dahl A, Ye CJ, Zaitlen N, and **Balliu B**. Fast and power- ful statistical method for context-specific QTL mapping in multi-context genomic studies. bioRxiv; doi:https://doi.org/10.1101/2021.06.17.448889.
 
 * Thompson M, Gordon MG, Lu A, Tandon A, Halperin E, Gusev A, Ye CJ, **Balliu B**, Zaitlen N. Multi-context genetic modeling of transcriptional regulation resolves novel disease loci. bioRxiv; doi:https://doi.org/10.1101/2021.09.23.461579.
 
-* Gloudemans MJ*, **Balliu B**, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Multidimensional co-localization of expression and splicing QTLs across metabolic traits and tissues prioritizes new insulin resistance genes. medRxiv; doi:https://doi.org/10.1101/ 2021.09.28.21264208.
+* Gloudemans MJ&ast;, **Balliu B**&ast;, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Multidimensional co-localization of expression and splicing QTLs across metabolic traits and tissues prioritizes new insulin resistance genes. medRxiv; doi:https://doi.org/10.1101/ 2021.09.28.21264208.
 
 * Briscoe L, **Balliu B**, Sankararaman S, Halperin E; Garud N. Correcting for Background Noise Im- proves Phenotype Prediction from Human Gut Microbiome Data. bioRxiv; doi:https://doi.org/ 10.1101/2021.03.19.436199.
 
@@ -22,17 +22,13 @@ Complete list of my publications can be found on my Google Scholar profile.
 
 * Johnson R, Ding Y, Venkateswaran V, Bhattacharya A, Chiu A, Schwarz T, Freund M, Zhan L, Burch KS, Caggiano C, Hill B, Rakocz N, **Balliu B**, Sul JH, Zaitlen N, Arboleda VA, Halperin E, Sankararaman S, Butte MJ, UCLA Precision Health Data Discovery Repository Working Group, UCLA Precision Health ATLAS Working Group, Lajonchere C, Geschwind D H, Pasaniuc B. Leveraging genomic diversity for discovery in an EHR-linked biobank: the UCLA ATLAS Community Health Initiative. medRxiv; doi:https://doi.org/10.1101/2021.09.22.21263987.
 
-* Deshpande D, Chhugani K, Chang Y, Karlsberg A, Loeffler C, Zhang J, Muszynska A, Rotman J, Tao L, **Balliu B**, Tseng E, Eskin E, Zhao F, Mohammadi P, Labaj PP, Mangul S. RNA-seq data science: From raw data to effective interpretation. arXiv; http://arxiv.org/abs/2010.02391.
-
 * **Balliu B**, Douglas C, Shenhav L, Wu A, Hatzopoulou D, Congdon E, Craske M, Freimer N, Halperin E, Sankararaman S, Flint J. Predicting mood from patterns of behavior collected with smartphones. In preparation.
 
-# Journal Publications
+# Selected Journal Publications
 
 * **Balliu B**, Carcamo-Oribe I*, Gloudemans MJ, Nachun D, Durrant M, Ingelsson E, Quertermous T, Knowles JW, Montgomery S. An integrated approach to identify environmental modulators of genetic risk factors for complex traits. AJHG 2021; In press.
 
 * Perez RK*, Gordon MG*, Subramaniam M*, Kim MC, Hartoularos G, Targ S , Sun Y , Lu A, Thompson M, Rappoport N, Dahl A, Lanata CM, Matloubian M, Maliskova L, Kwek S, Li T, Slyper M, Rozenblatt-Rosen O, Fong L, Dall’era M, **Balliu B**, Regev A, Yazdany J, Criswell L, Zaitlen N, Ye CJ. Multiplexed scRNA-seq reveals the cellular and genetic correlates of systemic lupus erythematosus. Science 2021; In press.
-
-* Alser M, Rotman J, Deshpande D, Taraszka K, Shi H, Baykal PI, Yang HT, Xue V, Knyazev S, Singer BD, **Balliu B**, Koslicki D, Skums P, Zelikovsky A, Alkan C, Mutlu O, Mangul S (2021). Technology dictates algorithms: Recent developments in read alignment. Genome Biology 2021; 22:249.
 
 * Chang TS, Ding Y, Freund MK, Johnson R, Schwarz T, Yabu JM, Hazlett C, Chiang JN, Wulf DA, Antonio AL, Ariannejad M, Badillo AM, **Balliu B**, Berkovich Y, Broudy M, Dang T, Denny C, Es- kin E, Halperin E, Hill BL, Jain A, Katakwar V, Lajonchere C, Magyar C, Minton S, Mohammed G, Muhamed A, Pavan P, Pfeffer MA, Rakocz N, Rudas A, Salonga R, Sanders TJ, Tung P, Vu V, Zheng A, Geschwind DH, Butte MJ, Pasaniuc B. Pre-existing conditions in Hispanics/Latinxs that are COVID-19 risk factors. iScience 2021; 24(3).
 
@@ -45,8 +41,6 @@ Complete list of my publications can be found on my Google Scholar profile.
 * MoTrPAC Consortium. Molecular Transducers of Physical Activity Consortium (MoTrPAC): Mapping the Dynamic Responses to Exercise. Cell 2020; 181(7):1464-1474.
 
 * Contrepois K, Wu S, Moneghetti KJ, Hornburg D, Ahadi S, Tsai M, Metwally AA, Wei E, Lee- McMullen B, Quijada JV, Chen S, Christle JW, Ellenberger M, **Balliu B**, Taylor S, Durrant MG, Knowles DA, Choudhry H, Ashland M, Bahmani A, Enslen B, Amsallem M, Kobayashi Y, Avina M, Perelman D, Schu ̈ssler-Fiorenza RSM, Zhou W, Ashley EA, Montgomery SB, Chaib H, Haddad F, Snyder MP. Molecular Choreography of Acute Exercise. Cell 2020; 181(5):1112-1130.e16.
-
-* Goodman-Meza D, Rudas A, Chiang JN, Adamson PC, Ebinger J, Sun N, Botting P, Fulcher JA, Saab FG, Brook R, Eskin E, An U, Kordi M, Jew B, **Balliu B**, Chen Z, Hill BL, Rahmani E, Halperin E, Manuel V. A machine learning algorithm to increase COVID-19 inpatient diagnostic capacity. PLoS One 2020; 15(9):e0239474. PMID: 32960917.
 
 * **Balliu B**, Durrant M, de Goede O, Abell N, Liu B, Gloudemans MJ, Cook NK, Smith KS, Knowles D, Pala M, Cucca F, Schlessinger D, Jaiswal S, Sabatti C, Lind L, Ingelsson E, Montgomery SB. Genetic regulation of gene expression and splicing during a 10-year period of human aging. Genome Biology 2019; 20(230).
 Balliu B, Houwing-Duistermaat JJ, and Boehringer S. Powerful testing via hierarchical linkage dis- equilibrium in haplotype association studies. Biometrical Journal 2019; 61(3):747-768. 
