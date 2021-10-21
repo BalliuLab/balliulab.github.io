@@ -6,10 +6,11 @@ redirect_from:
   - /md/
   - /markdown.html
 ---
+Complete list of my publications can be found on my Google Scholar profile.
 
-PREPRINTS - WORK IN PROGRESS
-######
-Lu A, Thompson M, Gordon MG, Dahl A, Ye CJ, Zaitlen N, and Balliu B. Fast and power- ful statistical method for context-specific QTL mapping in multi-context genomic studies. bioRxiv; doi:https://doi.org/10.1101/2021.06.17.448889.
+
+# Preprints - Work in Progress
+  # Lu A, Thompson M, Gordon MG, Dahl A, Ye CJ, Zaitlen N, and Balliu B. Fast and power- ful statistical method for context-specific QTL mapping in multi-context genomic studies. bioRxiv; doi:https://doi.org/10.1101/2021.06.17.448889.
 
 Thompson M, Gordon MG, Lu A, Tandon A, Halperin E, Gusev A, Ye CJ, Balliu B, Zaitlen N. Multi-context genetic modeling of transcriptional regulation resolves novel disease loci. bioRxiv; doi:https://doi.org/10.1101/2021.09.23.461579.
 
@@ -25,9 +26,7 @@ Deshpande D, Chhugani K, Chang Y, Karlsberg A, Loeffler C, Zhang J, Muszynska A,
 
 Balliu B, Douglas C, Shenhav L, Wu A, Hatzopoulou D, Congdon E, Craske M, Freimer N, Halperin E, Sankararaman S, Flint J. Predicting mood from patterns of behavior collected with smartphones. In preparation.
 
-JOURNAL PUBLICATIONS
-######
-Complete list of my publications can be found on my Google Scholar profile.
+# Journal Publications
 
 Balliu B*, Carcamo-Oribe I*, Gloudemans MJ, Nachun D, Durrant M, Ingelsson E, Quertermous T, Knowles JW, Montgomery S. An integrated approach to identify environmental modulators of genetic risk factors for complex traits. AJHG 2021; In press.
 
