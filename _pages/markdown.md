@@ -10,11 +10,13 @@ Complete list of my publications can be found on my Google Scholar [profile](htt
 
 
 # Selected Preprints - Work in Progress
+\* indicates equal contribution
+
 * Lu A, Thompson M, Gordon MG, Dahl A, Ye CJ, Zaitlen N, and **Balliu B**. Fast and power- ful statistical method for context-specific QTL mapping in multi-context genomic studies. bioRxiv; doi:https://doi.org/10.1101/2021.06.17.448889.
 
 * Thompson M, Gordon MG, Lu A, Tandon A, Halperin E, Gusev A, Ye CJ, **Balliu B**, Zaitlen N. Multi-context genetic modeling of transcriptional regulation resolves novel disease loci. bioRxiv; doi:https://doi.org/10.1101/2021.09.23.461579.
 
-* Gloudemans MJ &ast, **Balliu B** \*, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Multidimensional co-localization of expression and splicing QTLs across metabolic traits and tissues prioritizes new insulin resistance genes. medRxiv; doi:https://doi.org/10.1101/ 2021.09.28.21264208.
+* Gloudemans MJ\*, **Balliu B**\*, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Multidimensional co-localization of expression and splicing QTLs across metabolic traits and tissues prioritizes new insulin resistance genes. medRxiv; doi:https://doi.org/10.1101/ 2021.09.28.21264208.
 
 * Briscoe L, **Balliu B**, Sankararaman S, Halperin E; Garud N. Correcting for Background Noise Im- proves Phenotype Prediction from Human Gut Microbiome Data. bioRxiv; doi:https://doi.org/ 10.1101/2021.03.19.436199.
 
@@ -25,10 +27,11 @@ Complete list of my publications can be found on my Google Scholar [profile](htt
 * **Balliu B**, Douglas C, Shenhav L, Wu A, Hatzopoulou D, Congdon E, Craske M, Freimer N, Halperin E, Sankararaman S, Flint J. Predicting mood from patterns of behavior collected with smartphones. In preparation.
 
 # Selected Journal Publications
+\* indicates equal contribution
 
-* **Balliu B**, Carcamo-Oribe I*, Gloudemans MJ, Nachun D, Durrant M, Ingelsson E, Quertermous T, Knowles JW, Montgomery S. An integrated approach to identify environmental modulators of genetic risk factors for complex traits. AJHG 2021; In press.
+* **Balliu B**\*, Carcamo-Oribe I*\*, Gloudemans MJ, Nachun D, Durrant M, Ingelsson E, Quertermous T, Knowles JW, Montgomery S. An integrated approach to identify environmental modulators of genetic risk factors for complex traits. AJHG 2021; In press.
 
-* Perez RK*, Gordon MG*, Subramaniam M*, Kim MC, Hartoularos G, Targ S , Sun Y , Lu A, Thompson M, Rappoport N, Dahl A, Lanata CM, Matloubian M, Maliskova L, Kwek S, Li T, Slyper M, Rozenblatt-Rosen O, Fong L, Dall’era M, **Balliu B**, Regev A, Yazdany J, Criswell L, Zaitlen N, Ye CJ. Multiplexed scRNA-seq reveals the cellular and genetic correlates of systemic lupus erythematosus. Science 2021; In press.
+* Perez RK\*, Gordon MG\*, Subramaniam M\*, Kim MC, Hartoularos G, Targ S , Sun Y , Lu A, Thompson M, Rappoport N, Dahl A, Lanata CM, Matloubian M, Maliskova L, Kwek S, Li T, Slyper M, Rozenblatt-Rosen O, Fong L, Dall’era M, **Balliu B**, Regev A, Yazdany J, Criswell L, Zaitlen N, Ye CJ. Multiplexed scRNA-seq reveals the cellular and genetic correlates of systemic lupus erythematosus. Science 2021; In press.
 
 * Chang TS, Ding Y, Freund MK, Johnson R, Schwarz T, Yabu JM, Hazlett C, Chiang JN, Wulf DA, Antonio AL, Ariannejad M, Badillo AM, **Balliu B**, Berkovich Y, Broudy M, Dang T, Denny C, Es- kin E, Halperin E, Hill BL, Jain A, Katakwar V, Lajonchere C, Magyar C, Minton S, Mohammed G, Muhamed A, Pavan P, Pfeffer MA, Rakocz N, Rudas A, Salonga R, Sanders TJ, Tung P, Vu V, Zheng A, Geschwind DH, Butte MJ, Pasaniuc B. Pre-existing conditions in Hispanics/Latinxs that are COVID-19 risk factors. iScience 2021; 24(3).
 
