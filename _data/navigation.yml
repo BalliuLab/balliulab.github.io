@@ -4,7 +4,7 @@ main:
   - title: "People"
     url: /cv/
  
-   - title: "Projects"
+  - title: "Projects"
     url: /portfolio/
     
   - title: "Software"
