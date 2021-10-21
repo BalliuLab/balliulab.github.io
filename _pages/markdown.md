@@ -14,7 +14,7 @@ Complete list of my publications can be found on my Google Scholar [profile](htt
 
 * Thompson M, Gordon MG, Lu A, Tandon A, Halperin E, Gusev A, Ye CJ, **Balliu B**, Zaitlen N. Multi-context genetic modeling of transcriptional regulation resolves novel disease loci. bioRxiv; doi:https://doi.org/10.1101/2021.09.23.461579.
 
-* Gloudemans MJ&ast;, **Balliu B**&ast;, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Multidimensional co-localization of expression and splicing QTLs across metabolic traits and tissues prioritizes new insulin resistance genes. medRxiv; doi:https://doi.org/10.1101/ 2021.09.28.21264208.
+* Gloudemans MJ &ast, **Balliu B** \*, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Multidimensional co-localization of expression and splicing QTLs across metabolic traits and tissues prioritizes new insulin resistance genes. medRxiv; doi:https://doi.org/10.1101/ 2021.09.28.21264208.
 
 * Briscoe L, **Balliu B**, Sankararaman S, Halperin E; Garud N. Correcting for Background Noise Im- proves Phenotype Prediction from Human Gut Microbiome Data. bioRxiv; doi:https://doi.org/ 10.1101/2021.03.19.436199.
 
