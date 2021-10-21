@@ -9,51 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+### Brunilda Balliu, Principal Investigator
+I am currently an Independent Fellow in the [Department of Computational Medicine](https://compmed.ucla.edu/) in the David Geffen School of Medicine at UCLA. From 2015 to 2018, I did my postdoctoral research at Stanford University with [Stephen Montgomery](http://montgomerylab.stanford.edu/), focusing on the combined effects of age and genetics on gene expression and alternative splicing. Prior to that, I did my PhD in The Netherlands with [Jeanine Houwing-Duistermaat](http://jeaninehouwing.com/) and [Stefan Boehringer](http://s-boehringer.org/) on [Statistical methods for genetic association studies with response-selective sampling designs](https://openaccess.leidenuniv.nl/handle/1887/35195). I have a BSc. in Statistics from the [Statistics Department](https://www.dept.aueb.gr/en/stat/content/department-statistics) at the [Athens University of Economics and Business](https://www.dept.aueb.gr/en/stat). 
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+### Andrew Lu, Rotation PhD student
+Andrew is an MD-PhD student in the UCLA-Caltech Medical Scientist Training Program. During his rotation in the lab, Andrew worked on context-specific eQTL mapping in multi-context genomic studies. The preprint is now available on [BioRxiv](https://www.biorxiv.org/content/10.1101/2021.06.17.448889v1)!
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
