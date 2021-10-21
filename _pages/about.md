@@ -16,4 +16,4 @@ We apply these methods to understand the role of genetic variation in the divers
 
 
 ## Join us!
-We're always looking for great people to join the lab! If you're a UCLA student, feel free to [e-mail me](mailto:bballiu@ucla.edu) about rotating in the lab. We have an opening for a postdoctoral positions for qualitatively skilled PhDs to study the impact of genomic variation on the gene regulatory networks of reprogramming to pluripotency (with the [Zaitlen lab](https://people.healthsciences.ucla.edu/institution/personnel?personnel_id=9285764)). Please email a copy of your CV if you are interested.
+We're always looking for great people to join the lab! If you're a UCLA student, feel free to [e-mail me](mailto:bballiu@ucla.edu) about rotating in the lab. We have an opening for a postdoctoral positions for qualitatively skilled PhDs to study the impact of genomic variation on the gene regulatory networks of reprogramming to pluripotency. Please [e-mail me](mailto:bballiu@ucla.edu) a copy of your CV if you are interested.
