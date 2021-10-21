@@ -1,6 +1,6 @@
 ---
 title: "Prioritizing environmental modulators of genetic risk factors for complex traits"
-excerpt: "Prioritizing environmental modulators of genetic risk factors for complex traits <br/><img src='/images/IR_GxE.png'>"
+excerpt: "<br/><img src='/images/IR_GxE.png'>"
 collection: portfolio
 ---
 
