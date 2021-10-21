@@ -49,17 +49,13 @@ Complete list of my publications can be found on my Google Scholar profile.
 * Goodman-Meza D, Rudas A, Chiang JN, Adamson PC, Ebinger J, Sun N, Botting P, Fulcher JA, Saab FG, Brook R, Eskin E, An U, Kordi M, Jew B, **Balliu B**, Chen Z, Hill BL, Rahmani E, Halperin E, Manuel V. A machine learning algorithm to increase COVID-19 inpatient diagnostic capacity. PLoS One 2020; 15(9):e0239474. PMID: 32960917.
 
 * **Balliu B**, Durrant M, de Goede O, Abell N, Liu B, Gloudemans MJ, Cook NK, Smith KS, Knowles D, Pala M, Cucca F, Schlessinger D, Jaiswal S, Sabatti C, Lind L, Ingelsson E, Montgomery SB. Genetic regulation of gene expression and splicing during a 10-year period of human aging. Genome Biology 2019; 20(230).
-Balliu B, Houwing-Duistermaat JJ, and Boehringer S. Powerful testing via hierarchical linkage dis- equilibrium in haplotype association studies. Biometrical Journal 2019; 61(3):747-768. Top down- loaded paper 2018-2019.
+Balliu B, Houwing-Duistermaat JJ, and Boehringer S. Powerful testing via hierarchical linkage dis- equilibrium in haplotype association studies. Biometrical Journal 2019; 61(3):747-768. 
 
 * Fresard L, Smail C, Ferraro NM, Teran NA, Li X, Smith KS, Bonner D, Kernohan KD, Marwaha S, Zappala Z, **Balliu B**, Davis JR, Liu B, Prybol CJ, Kohler JN, Zastrow DB, Reuter CM, Fisk DG, Grove ME, Davidson JM, Hartley T, Joshi R, Strober BJ, Utiramerur S, Lind L, Ingelsson E, Battle A, Bejerano G, Bernstein JA, Ashley EA, Boycott KM, Merker JD, Wheeler MT, Montgomery SB. Identification of rare-disease genes using blood transcriptome sequencing and large control cohorts. Nature Medicine 2020; 25(6):911-919.
 
 * Liu B, Calton MA, Abell NS, Benchorin G, Gloudemans MJ, Chen M, Hu J, Li X, **Balliu B**, Bok D, Montgomery SB, Vollrath D. Genetic analyses of human fetal retinal pigment epithelium gene expres- sion suggest ocular disease mechanisms. Communications in Biology 2019; 2:186.
 
-* Kraemer M, Quoc Bao H, Wieczorek D, **Balliu B**, Mikat B, and Boehringer S. Distinctive facial fea- tures in idiopathic Moyamoya disease in Caucasians: a first systematic analysis. PeerJ 2018; 6:e4740.
-
 * GTEx Consortium et al. Genetic effects on gene expression across human tissues. Nature 2017; 550:204-213.
-
-* Ferreira MA, Vonk JM, Baurecht H, Marenholz I, Tian C, Hoffman JD, Helmer Q, Tillander A, Ulle- mar V, van Dongen J, Lu Y, Ruschendorf F, Esparza-Gordillo J, Medway CW, Mountjoy E, Burrows K, Hummel O, Grosche S, Brumpton BM, Witte JS, Hottenga J, Willemsen G, Zheng J, Rodr ́ıguez E, Hotze M, Franke A, Revez JA, Beesley J, Matheson MC, Dharmage SC, Bain LM, Fritsche LG, Gabrielsen ME, **Balliu B**, [...], Boomsma DI, Almqvist C, Karlsson R, Koppelman GH, Paternoster L. Shared genetic origin of asthma, hay fever and eczema elucidates allergic disease biology. Nature Genetics 2017; 49:1752-1757.
 
 * Kukurba KR, Parsana P, **Balliu B**, Smith KS, Zappala Z, Knowles DA, Fav ́e M, Davis JR, Li X, Zhu X, Potash JB, Weissman MM, Shi J, Kundaje A, Levinson DF, Awadalla P, Mostafavi S, Battle A, Montgomery SB. Impact of X chromosome and sex on regulatory variation. Genome Research 2016; 26:768-777.
 
@@ -76,7 +72,5 @@ Balliu B, Houwing-Duistermaat JJ, and Boehringer S. Powerful testing via hierarc
 * Houwing-Duistermaat JJ, Helmer Q, **Balliu B**, van den Akker E, Tsonaka S, Uh H. Gene analysis for longitudinal family data using random-effects models. BMC Proceedings 2014; 8(1): S88.
 
 * Chen H, Malzahn D, **Balliu B**, Li C, Bailey JN. Testing genetic association with rare and common variants in family data. Genetic Epidemiology 2014; 38 (1): S37-43. 
-
-* Huijts P, Hollestelle A, **Balliu B**, Houwing-Duistermaat JJ, Meijers CM, Blom JC, Ozturk B, Krol- Warmerdam E, Wijnen J, Berns E, Martens J, Seynaeve C, Kiemeney LA, van der Heijden HF, Tollenaar R, Devilee P, van Asperen CJ. CHEK2*1100delC homozygosity in the Netherlands: preva- lence and risk of breast and lung cancer. EJHG 2014; 22: 46-51.
 
 * **Balliu B**, Tsonaka R, van der Woude D, Boehringer S, and Houwing-Duistermaat JJ (2012). Combin- ing family and twin data in association studies to estimate the non-inherited maternal antigens effect. Genetic Epidemiology; 36(8): 811-819.
