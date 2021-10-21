@@ -1,7 +1,7 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Statistical methods for functional contextualization of genetic associations"
+excerpt: "Statistical methods for functional contextualization of genetic associations 1<br/><img src='/images/profile.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+The vast majority of the loci identified from genetic association studies are located outside coding regions, complicating their mechanistic understanding. Our lab develops statistical methods and computational tools for contextualizing genetic associations by leveraging large-scale multi-context functional genomic data (e.g., Genotype Tissue Expression Project, Human Cell Atlas) have emerged as an attempt to find the right genes and contexts for disease-associated variants. Specifically, we have recently developed [FastGxC](https://www.biorxiv.org/content/10.1101/2021.06.17.448889v1), a computationally efficient and statistically powerful method for detecting context-specific QTL effects in multi-context genomic studies with shared noise. We have applied FastGxC to bulk multi-tissue and single-cell RNA-seq data sets to produce the most comprehensive tissue- and cell-type-specific eQTL maps to date. Together with collaborators at UCLA, we have also developed [CONTENT]((https://www.biorxiv.org/content/10.1101/2021.09.23.461579v1)), an extension of FastGxC to cross-context transcriptome-wide association studies to increase power to identify genes associated with complex traits and their tissue and cell types of action. 
