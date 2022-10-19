@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-We are a research group in the Departments of [Pathology and Laboratory Medicine](https://www.uclahealth.org/departments/pathology) and [Computational Medicine](https://compmed.ucla.edu/) in the [David Geffen School of Medicine](https://medschool.ucla.edu/) at [UCLA](https://www.ucla.edu/). We are affiliated with the [Bioinformatics PhD] program(https://bioinformatics.ucla.edu/). 
+We are a research group in the Departments of [Pathology and Laboratory Medicine](https://www.uclahealth.org/departments/pathology) and [Computational Medicine](https://compmed.ucla.edu/) in the [David Geffen School of Medicine](https://medschool.ucla.edu/) at [UCLA](https://www.ucla.edu/). We are affiliated with the [Bioinformatics PhD program](https://bioinformatics.ucla.edu/). 
 
 
 We develop novel statistical methods and computational tools for analyzing high-dimensional repeated measures and intensive longitudinal data such as those arising from high-throughput genomic assays, mobile phone and wearable sensors, and electronic health records. We apply these methods to understand the genetic basis of complex traits and diseases. 
