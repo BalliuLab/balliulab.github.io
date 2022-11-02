@@ -15,6 +15,8 @@ I am an Assistant Professor in the Departments of [Pathology & Laboratory Medici
 
  Outside work, I have been obsessed with salsa dancing since I saw [these two](https://www.youtube.com/watch?v=NkP6d0csYfM&ab_channel=BoscoOrtega) dancing. 
 
-### Andrew Lu, Rotation PhD student
+### Lab alumni 
+
+# Andrew Lu, Rotation PhD student
 Andrew is an MD-PhD student in the UCLA-Caltech Medical Scientist Training Program. During his rotation in the lab, Andrew worked on context-specific eQTL mapping in multi-context genomic studies. The preprint is now available on [BioRxiv](https://www.biorxiv.org/content/10.1101/2021.06.17.448889v1)!
 
