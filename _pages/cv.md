@@ -20,13 +20,13 @@ I am an Assistant Professor in the Departments of [Pathology & Laboratory Medici
 Lena is a Bioinformatics PhD student at UCLA working on methods for trans-eQTL mapping in single cell RNA-Seq and bulk multi-context data. 
 
 ### Jerome Freudenberg, Rotation PhD student
-Jerome is a Bioinformatics PhD student at UCLA working on methods for joint allele-specific expression and chromatin accesibility analyses in single cell multiome RNA-Seq and ATAC seq data. 
+Jerome is a Bioinformatics PhD student at UCLA working on methods for joint allele-specific expression and chromatin accessibility analyses in single cell multiome RNA-Seq and ATAC seq data. 
 
 ### Stephanie Weber, Master student
 Stephanie is a Master student in Human Genetics & Genomic Data Analytics at the Keck Graduate Institute. She is working on dynamic (temporal) cis-eQTL mapping in single cell data using allele-specific expression analyses. 
 
 ### Yuxuan Xia, Undergraduate student
-Yuxuan is a undergraduate student in Computational and Systems Biology minoring in Data Science Engineering at UCLA. She is working in cis-eQTL mapping in single cell data. 
+Yuxuan is an undergraduate student in Computational and Systems Biology minoring in Data Science Engineering at UCLA. She is working in cis-eQTL mapping in single cell data. 
 
 
 # Lab alumni 
