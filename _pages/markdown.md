@@ -9,31 +9,22 @@ redirect_from:
 Complete list of my publications can be found on my Google Scholar [profile](https://scholar.google.com/citations?user=KvHIH9nZaiUC&hl=en).
 
 
-# Selected Preprints - Work in Progress
+# Selected Work 
 \* indicates equal contribution
 
-* Lu A, Thompson M, Gordon MG, Dahl A, Ye CJ, Zaitlen N, and **Balliu B**. Fast and power- ful statistical method for context-specific QTL mapping in multi-context genomic studies. bioRxiv; doi:https://doi.org/10.1101/2021.06.17.448889.
+* Lu A, Thompson M, Gordon MG, Dahl A, Ye CJ, Zaitlen N, and **Balliu B**. Fast and powerful statistical method for context-specific QTL mapping in multi-context genomic studies. bioRxiv 2021; doi:https://doi.org/10.1101/2021.06.17.448889.
 
-* Thompson M, Gordon MG, Lu A, Tandon A, Halperin E, Gusev A, Ye CJ, **Balliu B**, Zaitlen N. Multi-context genetic modeling of transcriptional regulation resolves novel disease loci. bioRxiv; doi:https://doi.org/10.1101/2021.09.23.461579.
+* Thompson M, Gordon MG, Lu A, Tandon A, Halperin E, Gusev A, Ye CJ, **Balliu B**, Zaitlen N. Multi-context genetic modeling of transcriptional regulation resolves novel disease loci. Nat Commun 2022, https://doi.org/10.1038/s41467-022-33212-0.
 
-* Gloudemans MJ\*, **Balliu B**\*, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Multidimensional co-localization of expression and splicing QTLs across metabolic traits and tissues prioritizes new insulin resistance genes. medRxiv; doi:https://doi.org/10.1101/ 2021.09.28.21264208.
+* **Balliu B**, Douglas C, Shenhav L, Wu A, Seok D, Hatzopoulou D, Congdon E, Craske M, Freimer N, Halperin E, Sankararaman S, Flint J. Personalized Mood Prediction from Patterns of Behavior Collected with Smartphones. MedRxiv 2022, doi: https://doi.org/10.1101/2022.10.12.22281007.
 
-* Briscoe L, **Balliu B**, Sankararaman S, Halperin E; Garud N. Correcting for Background Noise Im- proves Phenotype Prediction from Human Gut Microbiome Data. bioRxiv; doi:https://doi.org/ 10.1101/2021.03.19.436199.
+* **Balliu B**\*, Carcamo-Oribe I*\*, Gloudemans MJ, Nachun D, Durrant M, Ingelsson E, Quertermous T, Knowles JW, Montgomery S. An integrated approach to identify environmental modulators of genetic risk factors for complex traits. AJHG 2021, https://doi.org/10.1016/j.ajhg.2021.08.014. 
 
-* Garske KM, Comenho C, **Balliu B**, Pan DZ, Bhagat YV, Rosenberg G, Koka A, Kar A, Subhra Das S, Miao Z, Sinsheimer JS, Kaprio J, Pietilainen KH, Pajukanta P. Increased body mass index leads to systemic inflammation through altered chromatin co-accessibility in human pre-adipocytes. Under review at Nature Communications.
+* Perez RK\*, Gordon MG\*, Subramaniam M\*, Kim MC, Hartoularos G, Targ S , Sun Y , Lu A, Thompson M, Rappoport N, Dahl A, Lanata CM, Matloubian M, Maliskova L, Kwek S, Li T, Slyper M, Rozenblatt-Rosen O, Fong L, Dall’era M, **Balliu B**, Regev A, Yazdany J, Criswell L, Zaitlen N, Ye CJ. Single-cell RNA-seq reveals the cell-type-specific molecular and genetic associations to lupus. Science 2022; DOI: 10.1126/science.abf1970. 
 
-* Johnson R, Ding Y, Venkateswaran V, Bhattacharya A, Chiu A, Schwarz T, Freund M, Zhan L, Burch KS, Caggiano C, Hill B, Rakocz N, **Balliu B**, Sul JH, Zaitlen N, Arboleda VA, Halperin E, Sankararaman S, Butte MJ, UCLA Precision Health Data Discovery Repository Working Group, UCLA Precision Health ATLAS Working Group, Lajonchere C, Geschwind D H, Pasaniuc B. Leveraging genomic diversity for discovery in an EHR-linked biobank: the UCLA ATLAS Community Health Initiative. medRxiv; doi:https://doi.org/10.1101/2021.09.22.21263987.
+* Gloudemans MJ\*, **Balliu B**\*, Nachun D, Quertermous T, Montgomery S, Ingelsson E, Knowles JW, Carcamo-Oribe I. Integration of genetic colocalizations with physiological and pharmacological perturbations identifies cardiometabolic disease genes. Genome Medicine 2022. https://doi.org/10.1186/s13073-022-01036-8. 
 
-* **Balliu B**, Douglas C, Shenhav L, Wu A, Hatzopoulou D, Congdon E, Craske M, Freimer N, Halperin E, Sankararaman S, Flint J. Predicting mood from patterns of behavior collected with smartphones. In preparation.
-
-# Selected Journal Publications
-\* indicates equal contribution
-
-* **Balliu B**\*, Carcamo-Oribe I*\*, Gloudemans MJ, Nachun D, Durrant M, Ingelsson E, Quertermous T, Knowles JW, Montgomery S. An integrated approach to identify environmental modulators of genetic risk factors for complex traits. AJHG 2021; In press.
-
-* Perez RK\*, Gordon MG\*, Subramaniam M\*, Kim MC, Hartoularos G, Targ S , Sun Y , Lu A, Thompson M, Rappoport N, Dahl A, Lanata CM, Matloubian M, Maliskova L, Kwek S, Li T, Slyper M, Rozenblatt-Rosen O, Fong L, Dall’era M, **Balliu B**, Regev A, Yazdany J, Criswell L, Zaitlen N, Ye CJ. Multiplexed scRNA-seq reveals the cellular and genetic correlates of systemic lupus erythematosus. Science 2021; In press.
-
-* Chang TS, Ding Y, Freund MK, Johnson R, Schwarz T, Yabu JM, Hazlett C, Chiang JN, Wulf DA, Antonio AL, Ariannejad M, Badillo AM, **Balliu B**, Berkovich Y, Broudy M, Dang T, Denny C, Es- kin E, Halperin E, Hill BL, Jain A, Katakwar V, Lajonchere C, Magyar C, Minton S, Mohammed G, Muhamed A, Pavan P, Pfeffer MA, Rakocz N, Rudas A, Salonga R, Sanders TJ, Tung P, Vu V, Zheng A, Geschwind DH, Butte MJ, Pasaniuc B. Pre-existing conditions in Hispanics/Latinxs that are COVID-19 risk factors. iScience 2021; 24(3).
+* Briscoe L, **Balliu B**, Sankararaman S, Halperin E; Garud N. Evaluating supervised and unsupervised background noise correction in human gut microbiome data. PLOS Comp Bio 2020. https://doi.org/10.1371/journal.pcbi.1009838. 
 
 * Oliva et al. Wucher V, Gewirtz ADH, Cotter DJ, Parsana P, Kasela S, **Balliu B**, Vinuela A, Castel SE, Mohammadi P, Aguet F, Zou Y, Khramtsova EA, Skol AD, Garrido-Mart ́ın D, Reverter F, Brown A, Evans P, Gamazon ER, Payne A, Bonazzola R, Barbeira AN, Hamel AR, Martinez-Perez A, So- ria JS, Pierce BL, Stephens M, Eskin E, Dermitzakis EY, Segre AV, Im HK, Engelhardt BE, Ardlie KG, Montgomery SB, Battle AJ, Lappalainen T, Guig ́o R, Stranger BE. The impact of sex on gene expression across human tissues. Science 2020; 369(6509).
 
