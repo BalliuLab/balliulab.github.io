@@ -1,6 +1,6 @@
 ---
 title: "Statistical methods for functional contextualization of genetic associations"
-excerpt: "<br/><img src='/images/profile.png'>"
+excerpt: "<br/><img src='/images/profile.png' width='128' height='128'>"
 collection: portfolio
 ---
 
