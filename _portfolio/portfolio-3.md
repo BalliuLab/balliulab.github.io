@@ -1,6 +1,6 @@
 ---
 title: "Impact of genomic variation on the gene regulatory networks of reprogramming to pluripotency"
-excerpt: ""
+excerpt: "<br/><img src='/images/IGVF.png' width='400' height='300'>"
 collection: portfolio
 ---
 
