@@ -1,6 +1,6 @@
 ---
 title: "Integrating digital behavioral health tracking in psychiatric genetics research"
-excerpt: "<br/><img src='/images/Digital Phenotyping.png' width='400' height='300'>"
+excerpt: "<br/><img src='/images/Digital Phenotyping.png' width='500' height='400'>"
 collection: portfolio
 ---
 
