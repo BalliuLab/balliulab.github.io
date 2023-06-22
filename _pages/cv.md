@@ -25,10 +25,13 @@ Yuxuan is an undergraduate student in Computational and Systems Biology minoring
 
 
 # Lab alumni 
+Andrew Lu, Rotation Ph.D. student, UCLA-CalTech MSTP, Winter 2020 - Winter 2021
 
-### Andrew Lu, Rotation Ph.D. student 2020, UCLA-CalTech MSTP 
-### Jerome Freudenberg, Rotation Ph.D. student, Bioinformatics, Winter 2023
-### Clara Frydman, Rotation Ph.D. student, Bioinformatics, Spring 2023
-### Jeremy Wang, Rotation Ph.D. student, Bioinformatics, Spring
-### Stephanie Weber, Master student, Fall 2022- Spring 2023
+Jerome Freudenberg, Rotation Ph.D. student, Bioinformatics, Winter 2023
+
+Clara Frydman, Rotation Ph.D. student, Bioinformatics, Spring 2023
+
+Jeremy Wang, Rotation Ph.D. student, Bioinformatics, Spring
+
+Stephanie Weber, Master student, Fall 2022- Spring 2023
 
