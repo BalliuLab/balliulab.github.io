@@ -14,14 +14,12 @@ We are particularly interested in understanding the role of inherited genetic va
 
 ## Join us!
 
-### Undergraduate students
-Unfortunately, we are not accepting undergrads this quarter. However, if you think you might be a good fit in the future, send me an [e-mail](mailto:bballiu@ucla.edu) with your research interests and your CV.  
+### Postdoctoral researchers
+We have an opening for a postdoctoral position for quantitatively skilled PhDs to study the impact of genomic variation on the gene regulatory networks of reprogramming as part of the [IGVF consortium](https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium). The position is shared with the Zaitlen lab at UCLA. If interested, please send me an [e-mail](mailto:bballiu@ucla.edu) with a short statement on your research interests, your CV, and contact information for three references. 
 
 ### Graduate students
 We take UCLA students from [Bioinformatics](https://bioinformatics.ucla.edu/), [Biomathematics](https://compmed.ucla.edu/biomathematics-graduate-programs), [Biostatistics](https://ph.ucla.edu/academics/departments/biostatistics/phd-biostatistics), [Genetics and Genomics](https://medschool.ucla.edu/departments/basic-science/human-genetics/training-education/genetics-and-genomics-phd-program), [Neuroscience](http://www.neuroscience.ucla.edu/) and related programs. We mentor students with a strong foundation in quantitative disciplines (statistics, math, computer science, etc) who are interested in developing new methods. We also welcome students with diverse backgrounds, such as neuroscience or quantitative biology, who are interested in analyzing large-scale datasets with a focus on specific biological inquiries. If you believe you would be a good fit for the lab, please send me an [e-mail](mailto:bballiu@ucla.edu) with your research interests and your CV. 
 
-
-### Postdoctoral researchers
-We have an opening for a postdoctoral position for quantitatively skilled PhDs to study the impact of genomic variation on the gene regulatory networks of reprogramming as part of the [IGVF consortium](https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium). The position is shared with the Zaitlen lab at UCLA. If interested, please send me an [e-mail](mailto:bballiu@ucla.edu) with a short statement on your research interests, your CV, and contact information for three references. 
-
+### Undergraduate students
+Unfortunately, we are not accepting undergrads this quarter. However, if you think you might be a good fit in the future, send me an [e-mail](mailto:bballiu@ucla.edu) with your research interests and your CV.  
 
