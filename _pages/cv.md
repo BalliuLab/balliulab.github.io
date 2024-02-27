@@ -20,6 +20,9 @@ I am an Assistant Professor in the Departments of [Pathology](https://www.uclahe
 ### Cuining (Choo) Liu, Rotation PhD student, Bioinformatics
 [Choo](https://github.com/chooliu) is a Bioinformatics Ph.D. student at UCLA working on methods for allele-specific expression and chromatin accessibility in single-cell RNA-Seq.
 
+### Tim Lindsey, Rotation PhD student, Bioinformatics
+[Tim](https://www.linkedin.com/in/timothy-d-lindsey) is a Bioinformatics Ph.D. student at UCLA working on methods for dynamic cis eQTL mapping. 
+
 ### Feiyang Huang, Master student, Biostatistics
 [Feiyang](https://www.linkedin.com/in/feiyang-huang-b6a006261) is a master's student in Biostatistics at UCLA. She's deeply passionate about the intricate application of statistical models in genetic studies and exploring genetic data.
 
