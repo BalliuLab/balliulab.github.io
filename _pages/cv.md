@@ -20,17 +20,20 @@ I am an Assistant Professor in the Departments of [Pathology](https://www.uclahe
 ### Feiyang Huang, Master student, Biostatistics
 [Faye](https://www.linkedin.com/in/feiyang-huang-b6a006261) is a master's student in Biostatistics working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
 
-### Yuxi Song, Rotating PhD student, Biostatistics
-Yuxi is a Biostatistics working on statistical methods for cis-eQTL mapping in single-cell and bulk RNA-Seq data. 
-
-### Kai Akamatsu, Rotating PhD student, Biomathematics
-[Kai](https://www.linkedin.com/in/kai-akamatsu/) is a Biomathematics Ph.D. student working on methods for integrating digital behavioral phenotypes into psychiatric genetic research. 
-
-### Wenxuan Karen Li, Rotating PhD student, Biomathematics
+### Wenxuan Karen Li, PhD student, Biomathematics
 [Karen]([https://www.linkedin.com/in/kai-akamatsu/](https://compmed.ucla.edu/profile/li-wenxuan-karen)) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. 
+
+### Lise Tucker, Undergraduate, Computational and Systems Biology
+[Lise]([https://www.linkedin.com/in/lise-tucker-946b72323/](https://www.linkedin.com/in/lise-tucker-946b72323/)) is a Computational and Systems Biology undergrad student working on novel cis eQTL mapping methods for single-cell RNA-seq data. 
 
 
 # Lab alumni 
+Nabil Mohammed, Rotation Ph.D. student, Bioinformatics, Winter 2025. 
+
+Kai Akamatsu, Rotating PhD student, Biomathematics, Fall 2024. 
+
+Yuxi Song, Rotating PhD student, Biostatistics, Fall 2024.
+
 Weijian Wang, Rotation Ph.D. student, Bioinformatics, Spring 2024. 
 
 Vivian Yee, Undergraduate student, Data Theory, Spring 2024
