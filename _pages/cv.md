@@ -17,8 +17,8 @@ I am an Assistant Professor in the Departments of [Pathology](https://www.uclahe
 ### Lena Krockenberger, PhD student, Bioinformatics
 [Lena](https://www.linkedin.com/in/lena-krockenberger-017470183) is a Bioinformatics Ph.D. student working on methods for trans-eQTL mapping in single-cell RNA-Seq and bulk multi-context data. 
 
-### Feiyang Huang, Master student, Biostatistics
-[Faye](https://www.linkedin.com/in/feiyang-huang-b6a006261) is a master's student in Biostatistics working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
+### Feiyang Huang, Computational & Data Science Research Specialist
+[Faye](https://www.linkedin.com/in/feiyang-huang-b6a006261) is Biostatistian working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
 
 ### Wenxuan Karen Li, PhD student, Biomathematics
 [Karen]([https://www.linkedin.com/in/kai-akamatsu/](https://compmed.ucla.edu/profile/li-wenxuan-karen)) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. 
