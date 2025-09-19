@@ -14,20 +14,29 @@ redirect_from:
 ### Brunilda Balliu, Principal Investigator
 I am an Assistant Professor in the Departments of [Pathology](https://www.uclahealth.org/departments/pathology), [Computational Medicine](https://compmed.ucla.edu/), and Biostatistics at UCLA. I obtained a BSc. in Statistics from the [Athens University of Economics and Business](https://www.dept.aueb.gr/en/stat/content/department-statistics) in Greece and a Ph.D. in [Statistical Genetics](https://openaccess.leidenuniv.nl/handle/1887/35195) from the Leiden University Medical Center in the Netherlands under the supervision of Prof. Dr. [Jeanine Houwing-Duistermaat](http://jeaninehouwing.com/) and [Stefan Boehringer](http://s-boehringer.org/). I did my postdoctoral research at Stanford University with [Stephen Montgomery](http://montgomerylab.stanford.edu/), focusing on methods to understand the role of inherited variation on molecular and complex traits. I joined UCLA in 2018 as an Independent Fellow in the Department of [Computational Medicine](https://compmed.ucla.edu/) and later as a faculty in the Departments of [Pathology](https://www.uclahealth.org/departments/pathology) and [Computational Medicine](https://compmed.ucla.edu/). Outside work, I have been obsessed with salsa dancing since I saw [these two](https://www.youtube.com/watch?v=NkP6d0csYfM&ab_channel=BoscoOrtega) dancing. 
 
-### Lena Krockenberger, PhD student, Bioinformatics
-[Lena](https://www.linkedin.com/in/lena-krockenberger-017470183) is a Bioinformatics Ph.D. student working on methods for trans-eQTL mapping in single-cell RNA-Seq and bulk multi-context data. 
+### PhD students
+[Lena Krockenberger](https://www.linkedin.com/in/lena-krockenberger-017470183) is a Bioinformatics Ph.D. student working on methods for trans-eQTL mapping in single-cell RNA-Seq and bulk multi-context data. 
 
-### Wenxuan Karen Li, PhD student, Biomathematics
-[Karen]([https://www.linkedin.com/in/kai-akamatsu/](https://compmed.ucla.edu/profile/li-wenxuan-karen)) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. 
+[Wenxuan Karen Li](https://compmed.ucla.edu/profile/li-wenxuan-karen) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. 
 
-### Feiyang Huang, Computational & Data Science Research Specialist
-[Faye](https://www.linkedin.com/in/feiyang-huang-b6a006261) is Biostatistian working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
+### Undergraduate students
 
-### Lise Tucker, Undergraduate, Computational and Systems Biology
-[Lise]([https://www.linkedin.com/in/lise-tucker-946b72323/](https://www.linkedin.com/in/lise-tucker-946b72323/)) is a Computational and Systems Biology undergrad student working on novel cis eQTL mapping methods for single-cell RNA-seq data. 
+[Lise Tucker](https://www.linkedin.com/in/lise-tucker-946b72323/) is a Computational and Systems Biology undergrad student working on novel cis eQTL mapping methods for single-cell RNA-seq data. 
 
-### Charlie Wang, Undergraduate, Statistics and Data Science
-[Charlie]([[https://www.linkedin.com/in/lise-tucker-946b72323/](https://www.linkedin.com/in/charliewang4615/)]([https://www.linkedin.com/in/lise-tucker-946b72323/](https://www.linkedin.com/in/charliewang4615/)) is a Statistics and Data Science undergrad student working on novel cis eQTL mapping methods for single-cell RNA-seq data. 
+[Charlie Wang](https://www.linkedin.com/in/charliewang4615/) is a Statistics and Data Science undergrad student working on novel cis eQTL mapping methods for single-cell omics data. 
+
+[Justin Ng](https://www.linkedin.com/in/frjntl/) is a Statistics and Data Science undergrad student working on novel cis eQTL mapping methods for single-cell omics data. 
+
+[Anthony Zhao](https://www.linkedin.com/in/azhao05/) is a Math and CS undergrad student working on novel multiple testing methods and methods for mapping regulatory effects in single-cell omics data. 
+
+
+### Staff
+[Feiyang Huang](https://www.linkedin.com/in/feiyang-huang-b6a006261) is Computational & Data Science Research Specialist working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
+
+[Jennifer Shedrack](https://www.linkedin.com/in/jennifer-shedrack-60133317b/) is our administrative assistant.
+
+
+
 
 
 # Lab alumni 
