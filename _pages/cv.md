@@ -17,14 +17,17 @@ I am an Assistant Professor in the Departments of [Pathology](https://www.uclahe
 ### Lena Krockenberger, PhD student, Bioinformatics
 [Lena](https://www.linkedin.com/in/lena-krockenberger-017470183) is a Bioinformatics Ph.D. student working on methods for trans-eQTL mapping in single-cell RNA-Seq and bulk multi-context data. 
 
-### Feiyang Huang, Computational & Data Science Research Specialist
-[Faye](https://www.linkedin.com/in/feiyang-huang-b6a006261) is Biostatistian working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
-
 ### Wenxuan Karen Li, PhD student, Biomathematics
 [Karen]([https://www.linkedin.com/in/kai-akamatsu/](https://compmed.ucla.edu/profile/li-wenxuan-karen)) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. 
 
+### Feiyang Huang, Computational & Data Science Research Specialist
+[Faye](https://www.linkedin.com/in/feiyang-huang-b6a006261) is Biostatistian working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
+
 ### Lise Tucker, Undergraduate, Computational and Systems Biology
 [Lise]([https://www.linkedin.com/in/lise-tucker-946b72323/](https://www.linkedin.com/in/lise-tucker-946b72323/)) is a Computational and Systems Biology undergrad student working on novel cis eQTL mapping methods for single-cell RNA-seq data. 
+
+### Charlie Wang, Undergraduate, Statistics and Data Science
+[Charlie]([[https://www.linkedin.com/in/lise-tucker-946b72323/](https://www.linkedin.com/in/charliewang4615/)]([https://www.linkedin.com/in/lise-tucker-946b72323/](https://www.linkedin.com/in/charliewang4615/)) is a Statistics and Data Science undergrad student working on novel cis eQTL mapping methods for single-cell RNA-seq data. 
 
 
 # Lab alumni 
