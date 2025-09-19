@@ -12,10 +12,11 @@ redirect_from:
 # Current members
 
 ### Brunilda Balliu, Principal Investigator
-I am an Assistant Professor in the Departments of [Pathology](https://www.uclahealth.org/departments/pathology), [Computational Medicine](https://compmed.ucla.edu/), and Biostatistics at UCLA. I obtained a BSc. in Statistics from the [Athens University of Economics and Business](https://www.dept.aueb.gr/en/stat/content/department-statistics) in Greece and a Ph.D. in [Statistical Genetics](https://openaccess.leidenuniv.nl/handle/1887/35195) from the Leiden University Medical Center in the Netherlands under the supervision of Prof. Dr. [Jeanine Houwing-Duistermaat](http://jeaninehouwing.com/) and [Stefan Boehringer](http://s-boehringer.org/). I did my postdoctoral research at Stanford University with [Stephen Montgomery](http://montgomerylab.stanford.edu/), focusing on methods to understand the role of inherited variation on molecular and complex traits. I joined UCLA in 2018 as an Independent Fellow in the Department of [Computational Medicine](https://compmed.ucla.edu/) and later as a faculty in the Departments of [Pathology](https://www.uclahealth.org/departments/pathology) and [Computational Medicine](https://compmed.ucla.edu/). Outside work, I have been obsessed with salsa dancing since I saw [these two](https://www.youtube.com/watch?v=NkP6d0csYfM&ab_channel=BoscoOrtega) dancing. 
+I am an Assistant Professor in the Departments of [Pathology & Laboratory Medicine](https://www.uclahealth.org/departments/pathology), [Computational Medicine](https://compmed.ucla.edu/), Human Genetics, and Biostatistics at UCLA. I received a BSc in Statistics from the [Athens University of Economics and Business](https://www.dept.aueb.gr/en/stat/content/department-statistics) (Greece) and a PhD in [Statistical Genetics](https://openaccess.leidenuniv.nl/handle/1887/35195) from Leiden University Medical Center (Netherlands), advised by Prof. Dr. [Jeanine Houwing-Duistermaat](http://jeaninehouwing.com/) and [Stefan Boehringer](http://s-boehringer.org/). I completed postdoctoral research at Stanford University with [Stephen Montgomery](http://montgomerylab.stanford.edu/), focusing on methods to understand the role of inherited variation in molecular and complex traits. I joined UCLA in 2018 as an Independent Fellow in [Computational Medicine](https://compmed.ucla.edu/) and later as faculty. Outside work, I’ve been obsessed with salsa dancing since I saw [these two dancing!](https://www.youtube.com/watch?v=NkP6d0csYfM&ab_channel=BoscoOrtega).
+
 
 ### PhD students
-[Lena Krockenberger](https://www.linkedin.com/in/lena-krockenberger-017470183) is a Bioinformatics Ph.D. student working on methods for trans-eQTL mapping in single-cell RNA-Seq and bulk multi-context data. 
+[Lena Krockenberger](https://www.linkedin.com/in/lena-krockenberger-017470183) is a Bioinformatics Ph.D. student working on methods for cis and trans-eQTL mapping in single-cell omics data. 
 
 [Wenxuan Karen Li](https://compmed.ucla.edu/profile/li-wenxuan-karen) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. 
 
@@ -34,9 +35,6 @@ I am an Assistant Professor in the Departments of [Pathology](https://www.uclahe
 [Feiyang Huang](https://www.linkedin.com/in/feiyang-huang-b6a006261) is Computational & Data Science Research Specialist working on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. 
 
 [Jennifer Shedrack](https://www.linkedin.com/in/jennifer-shedrack-60133317b/) is our administrative assistant.
-
-
-
 
 
 # Lab alumni 
