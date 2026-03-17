@@ -18,7 +18,7 @@ I am an Assistant Professor in the Departments of [Pathology & Laboratory Medici
 ### PhD students
 [Lena Krockenberger](https://www.linkedin.com/in/lena-krockenberger-017470183) is a Bioinformatics Ph.D. student working on methods for cis and trans-eQTL mapping in single-cell omics data. 
 
-[Wenxuan Karen Li](https://compmed.ucla.edu/profile/li-wenxuan-karen) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. 
+<!-- [Wenxuan Karen Li](https://compmed.ucla.edu/profile/li-wenxuan-karen) is a Biomathematics Ph.D. student working on methods for understanding phenotypic consequences of context-dependent regulatory effects. -->
 
 ### Undergraduate students
 
