@@ -123,6 +123,13 @@
   .home-cta{padding:6px 0 2px}
   .cta-btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;padding:13px 24px;border-radius:10px;font-size:19px}
   .cta-btn:hover{text-decoration:none;filter:brightness(1.07);color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:var(--readw);margin-bottom:26px}
+  .contact-grid h3{font-family:var(--serif);font-size:24px;font-weight:600;margin:0 0 10px}
+  .contact-grid p{color:var(--muted);font-size:18.6px;line-height:1.7}
+  .contact-links{display:flex;gap:20px;flex-wrap:wrap}
+  .contact-links a{display:inline-flex;align-items:center;gap:7px;font-weight:600}
+  .contact-links a svg{width:1.05em;height:1.05em;flex:none}
+  @media(max-width:680px){.contact-grid{grid-template-columns:1fr;gap:26px}}
 </style>
 </head>
 <body>
@@ -136,6 +143,7 @@
       <a href="#software" data-target="software">Software</a>
       <a href="#news" data-target="news">News</a>
       <a href="#join" data-target="join">Join</a>
+      <a href="#contact" data-target="contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -444,18 +452,36 @@
       <p>We have an opening for quantitatively skilled PhDs to study the impact of genomic variation on
         the gene regulatory networks of reprogramming as part of the
         <a href="https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium">IGVF consortium</a>
-        (shared with the Zaitlen lab). If interested, <a href="mailto:bballiu@ucla.edu">email me</a> with a short
+        (shared with the Zaitlen lab). If interested, <a class="eml" data-u="bballiu" data-d="ucla.edu" href="#">email me</a> with a short
         statement of research interests, your CV, and contact information for three references.</p>
       <h3>Graduate students</h3>
       <p>We take UCLA students from Bioinformatics, Biomathematics, Biostatistics, Genetics and Genomics,
         Neuroscience, and related programs. We mentor students with a strong quantitative foundation who
         want to develop new methods, as well as those from diverse backgrounds interested in analyzing
-        large-scale datasets. If you would be a good fit, <a href="mailto:bballiu@ucla.edu">email me</a> with your
+        large-scale datasets. If you would be a good fit, <a class="eml" data-u="bballiu" data-d="ucla.edu" href="#">email me</a> with your
         research interests and CV.</p>
       <h3>Undergraduate students</h3>
       <p>We are not accepting undergraduates this quarter. If you think you might be a good fit in the
-        future, <a href="mailto:bballiu@ucla.edu">email me</a> with your research interests and CV.</p>
+        future, <a class="eml" data-u="bballiu" data-d="ucla.edu" href="#">email me</a> with your research interests and CV.</p>
     </div>
+  </section>
+  </div>
+  <div class="page" data-page="contact">
+<section id="contact">
+    <p class="label">Contact</p>
+    <div class="contact-grid">
+      <div>
+        <h3>Brunilda Balliu</h3>
+        <p>Assistant Professor. Departments of Pathology &amp; Laboratory Medicine, Computational Medicine, Human Genetics, and Biostatistics, UCLA.</p>
+        <p><a class="eml" data-u="bballiu" data-d="ucla.edu" href="#"></a></p>
+      </div>
+      <div>
+        <h3>Find us</h3>
+        <p>Balliu Lab<br>Department of Computational Medicine<br>Center for Health Sciences (CHS), UCLA Fielding School of Public Health<br>10833 Le Conte Avenue<br>10th Floor, Room CHS 107-100<br>Los Angeles, CA 90095</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=UCLA+Center+for+Health+Sciences+Los+Angeles">Directions →</a></p>
+      </div>
+    </div>
+    <p class="read">Interested in joining the lab? See the <a href="#join" data-target="join">Join</a> page.</p>
   </section>
   </div>
 </div>
@@ -477,6 +503,7 @@
     a.addEventListener('click',function(e){e.preventDefault();var n=a.dataset.target;showPage(n);history.replaceState(null,'','#'+n);});
   });
   showPage((location.hash||'#home').slice(1));
+  document.querySelectorAll('a.eml').forEach(function(a){var e=a.dataset.u+'@'+a.dataset.d;a.href='mailto:'+e;if(!a.textContent.trim())a.textContent=e;});
 </script>
 </body>
 </html>
