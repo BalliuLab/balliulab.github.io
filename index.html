@@ -11,7 +11,7 @@
     color-scheme:light;
     --bg:#ffffff;--bg-2:#f7f6f3;--text:#22201d;--muted:#6f6a63;--faint:#928c83;
     --border:#e7e3dc;--accent:#b0512a;--accent-ink:#8f3f1f;
-    --maxw:1600px;--readw:1400px;
+    --maxw:1200px;--readw:1000px;
     --serif:"Charter","Bitstream Charter","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
@@ -64,6 +64,7 @@
   .theme .meta a{color:var(--accent)}
   .theme figure{margin:0}
   .theme figure img,.theme figure svg{width:100%;height:auto;display:block;border-radius:7px;border:1px solid var(--border);background:var(--bg-2)}
+  .theme figure .fig-ph{width:100%;height:180px;display:flex;align-items:center;justify-content:center;background:var(--bg-2);border:1px solid var(--border);border-radius:7px;color:var(--faint);font-family:var(--mono);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
   @media(max-width:680px){.theme{grid-template-columns:1fr;gap:18px}.theme figure{max-width:420px}}
 
   .pub{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--border)}
@@ -130,10 +131,10 @@
     <nav>
       <a href="#home" data-target="home">Home</a>
       <a href="#research" data-target="research">Research</a>
+      <a href="#people" data-target="people">People</a>
       <a href="#publications" data-target="publications">Publications</a>
       <a href="#software" data-target="software">Software</a>
       <a href="#news" data-target="news">News</a>
-      <a href="#people" data-target="people">People</a>
       <a href="#join" data-target="join">Join</a>
     </nav>
   </div>
@@ -206,26 +207,7 @@
           regulatory effects in both bulk and single-cell data.</p>
         <p class="meta">Methods: <a href="https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00112-6">FastGxC</a> (local) and <b>crocotel</b> (distal, in progress)</p>
       </div>
-      <figure><svg viewBox="0 0 320 200" role="img" aria-label="Context-specific genetic effects on gene expression">
-        <rect width="320" height="200" fill="var(--bg-2)"/>
-        <text x="24" y="24" font-family="ui-monospace,monospace" font-size="9.5" fill="var(--muted)">context-specific eQTL effects</text>
-        <g transform="translate(48,40)" font-family="ui-monospace,monospace" font-size="8.5">
-          <line x1="0" y1="120" x2="210" y2="120" stroke="var(--border)" stroke-width="1.4"/>
-          <line x1="0" y1="6" x2="0" y2="120" stroke="var(--border)" stroke-width="1.4"/>
-          <line x1="6" y1="112" x2="196" y2="16" stroke="var(--accent)" stroke-width="2.6"/>
-          <text x="200" y="19" fill="var(--muted)">A</text>
-          <line x1="6" y1="110" x2="196" y2="54" stroke="var(--accent)" stroke-width="2.4" opacity="0.7"/>
-          <text x="200" y="57" fill="var(--muted)">B</text>
-          <line x1="6" y1="106" x2="196" y2="92" stroke="var(--muted)" stroke-width="2" opacity="0.75"/>
-          <text x="200" y="95" fill="var(--muted)">C</text>
-          <line x1="6" y1="104" x2="196" y2="116" stroke="var(--muted)" stroke-width="2" opacity="0.45"/>
-          <text x="200" y="119" fill="var(--muted)">D</text>
-          <circle cx="54" cy="85" r="2.6" fill="var(--accent)"/><circle cx="110" cy="57" r="2.6" fill="var(--accent)"/><circle cx="162" cy="31" r="2.6" fill="var(--accent)"/>
-        </g>
-        <text x="163" y="186" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="var(--faint)">genotype</text>
-        <text x="20" y="104" transform="rotate(-90 20 104)" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="var(--faint)">expression</text>
-        <text x="243" y="104" transform="rotate(-90 243 104)" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="var(--faint)">across contexts</text>
-      </svg></figure>
+      <figure><div class="fig-ph">figure coming soon</div></figure>
     </div>
     <div class="theme">
       <div class="txt">
@@ -237,33 +219,7 @@
           for complex traits across tissues and cell types.</p>
         <p class="meta">Methods: <a href="https://doi.org/10.1038/s41467-022-33212-0">CONTENT</a> and <b>scMAGNET</b> (in progress)</p>
       </div>
-      <figure><svg viewBox="0 0 320 200" role="img" aria-label="Multi-context model linking gene regulation to disease genes">
-        <rect width="320" height="200" fill="var(--bg-2)"/>
-        <g font-family="ui-monospace,monospace" font-size="8.5" fill="var(--muted)">
-          <rect x="20" y="46" width="70" height="24" rx="4" fill="none" stroke="var(--border)"/><text x="55" y="61" text-anchor="middle">context 1</text>
-          <rect x="20" y="78" width="70" height="24" rx="4" fill="none" stroke="var(--border)"/><text x="55" y="93" text-anchor="middle">context 2</text>
-          <rect x="20" y="110" width="70" height="24" rx="4" fill="none" stroke="var(--border)"/><text x="55" y="125" text-anchor="middle">context 3</text>
-        </g>
-        <path d="M92 58 L132 78 M92 90 L132 90 M92 122 L132 102" stroke="var(--border)" stroke-width="1.4" fill="none"/>
-        <rect x="132" y="70" width="58" height="40" rx="7" fill="none" stroke="var(--accent)" stroke-width="1.8"/>
-        <text x="161" y="86" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8.5" fill="var(--accent)">shared +</text>
-        <text x="161" y="99" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8.5" fill="var(--accent)">specific</text>
-        <path d="M190 90 L222 90" stroke="var(--border)" stroke-width="1.4"/>
-        <g transform="translate(226,54)">
-          <line x1="0" y1="74" x2="74" y2="74" stroke="var(--border)" stroke-width="1.4"/>
-          <line x1="4" y1="74" x2="4" y2="62" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
-          <line x1="12" y1="74" x2="12" y2="56" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
-          <line x1="20" y1="74" x2="20" y2="66" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
-          <line x1="30" y1="74" x2="30" y2="30" stroke="var(--accent)" stroke-width="1.8"/>
-          <line x1="36" y1="74" x2="36" y2="14" stroke="var(--accent)" stroke-width="2"/>
-          <line x1="42" y1="74" x2="42" y2="40" stroke="var(--accent)" stroke-width="1.8"/>
-          <line x1="52" y1="74" x2="52" y2="60" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
-          <line x1="60" y1="74" x2="60" y2="64" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
-          <line x1="68" y1="74" x2="68" y2="58" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
-          <circle cx="36" cy="12" r="2.4" fill="var(--accent)"/>
-        </g>
-        <text x="263" y="150" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="var(--faint)">disease genes</text>
-      </svg></figure>
+      <figure><div class="fig-ph">figure coming soon</div></figure>
     </div>
     <div class="theme">
       <div class="txt">
@@ -293,6 +249,7 @@
   <div class="page" data-page="publications">
 <section id="publications">
     <p class="label">Selected publications</p>
+    <p class="allpubs"><a href="https://scholar.google.com/citations?user=KvHIH9nZaiUC&hl=en">Full list of publications</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/?term=(Balliu%2C%20Brunilda%5BAuthor%5D)%20OR%20Balliu%2C%20Bruna%5BAuthor%5D">PubMed</a></p>
     <div class="pub">
       <div class="yr">2026</div>
       <div>
@@ -357,7 +314,6 @@
         <p class="lnk"><a href="https://doi.org/10.1186/s13059-019-1840-y">Paper</a></p>
       </div>
     </div>
-    <p class="allpubs"><a href="#">Full list of publications</a> · <a href="https://scholar.google.com/citations?user=KvHIH9nZaiUC&hl=en">Google Scholar</a></p>
   </section>
   </div>
   <div class="page" data-page="software">
