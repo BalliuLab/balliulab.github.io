@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Balliu Lab @ UCLA. Statistical methods for high-dimensional repeated measures and intensive longitudinal data.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🧬</text></svg>">
+<title>Balliu Lab @ UCLA</title>
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#ffffff;--bg-2:#f7f6f3;--text:#22201d;--muted:#6f6a63;--faint:#928c83;
+    --border:#e7e3dc;--accent:#b0512a;--accent-ink:#8f3f1f;
+    --maxw:1600px;--readw:1400px;
+    --serif:"Charter","Bitstream Charter","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+    font-size:20.4px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--accent-ink);text-decoration:underline;text-underline-offset:2px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  header.nav{border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;
+    background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px)}
+  .nav .wrap{display:flex;align-items:baseline;justify-content:flex-end;gap:20px;padding-top:16px;padding-bottom:16px}
+  .nav .name{font-family:var(--serif);font-weight:700;font-size:25px;color:var(--text)}
+  .nav .name:hover{text-decoration:none}
+  .nav nav{display:flex;gap:22px;flex-wrap:wrap}
+  .nav nav a{color:var(--muted);font-size:24px}
+  .nav nav a:hover{color:var(--accent);text-decoration:none}
+  @media(max-width:640px){.nav nav{gap:15px}.nav nav a{font-size:19px}}
+
+  section{padding:56px 0;border-top:1px solid var(--border)}
+  section:first-of-type{border-top:none}
+  .label{font-family:var(--mono);font-size:18.0px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--faint);margin:0 0 20px}
+  h1,h2,h3{font-family:var(--serif);color:var(--text);line-height:1.2;text-wrap:balance;margin:0}
+  h2{font-size:31.2px;margin:0 0 4px;font-weight:600}
+  p{margin:0 0 16px}
+  .read{max-width:var(--readw)}
+
+  .intro{padding:64px 0 52px}
+  .intro h1{font-size:clamp(36px,5vw,52px);letter-spacing:-.01em;margin:0 0 22px}
+  .intro .sub{font-family:var(--serif);font-size:22.8px;color:var(--muted);margin:0 0 24px}
+  .intro p{color:var(--text)}
+  .intro .quick{margin-top:22px;font-size:18.0px}
+  .intro .quick a{font-weight:600;margin-right:22px;display:inline-flex;align-items:center;gap:7px}
+  .intro .quick a svg{width:1.05em;height:1.05em;flex:none}
+
+  /* RESEARCH — figure beside text, natural size */
+  .theme{display:grid;grid-template-columns:1fr 300px;gap:34px;align-items:center;
+    padding:32px 0;border-top:1px solid var(--border)}
+  .theme:first-child{border-top:none;padding-top:6px}
+  .theme h3{font-size:24.0px;margin:0 0 9px;font-weight:600}
+  .theme p{color:var(--muted);font-size:18.6px;margin:0}
+  .theme .meta{margin-top:11px;font-family:var(--mono);font-size:15.0px;color:var(--faint);line-height:1.5}
+  .theme .meta b{color:var(--accent);font-weight:500}
+  .theme .meta a{color:var(--accent)}
+  .theme figure{margin:0}
+  .theme figure img,.theme figure svg{width:100%;height:auto;display:block;border-radius:7px;border:1px solid var(--border);background:var(--bg-2)}
+  @media(max-width:680px){.theme{grid-template-columns:1fr;gap:18px}.theme figure{max-width:420px}}
+
+  .pub{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--border)}
+  .pub:first-child{border-top:none}
+  .pub .yr{font-family:var(--mono);font-size:16.2px;color:var(--faint);padding-top:2px}
+  .pub .t{font-size:19.2px;color:var(--text);line-height:1.4;margin:0 0 3px}
+  .pub .a{font-size:16.8px;color:var(--muted);margin:0}
+  .pub .a b{color:var(--text);font-weight:600}
+  .pub .v{font-style:italic}
+  .pub .role{color:var(--accent);font-family:var(--mono);font-size:13.8px;font-style:normal;margin-left:6px}
+  .pub .lnk{margin-top:6px;font-size:15.0px;font-family:var(--mono)}
+  .pub .lnk a{margin-right:12px;color:var(--muted)}
+  .pub .lnk a:hover{color:var(--accent)}
+  .allpubs{margin-top:22px;font-size:18.0px}
+
+  .news{display:grid;grid-template-columns:96px 1fr;gap:14px 20px;max-width:var(--readw);font-size:18.6px;max-height:900px;overflow-y:auto;padding-right:12px}
+  .news .d{font-family:var(--mono);font-size:15.6px;color:var(--faint)}
+  .news .x{color:var(--text);margin:0}
+
+  .tool{padding:16px 0;border-top:1px solid var(--border);max-width:var(--readw)}
+  .tool:first-of-type{border-top:none}
+  .tool h3{font-family:var(--mono);font-size:19.2px;font-weight:600;margin:0 0 5px}
+  .tool h3 a{color:var(--text)}
+  .tool h3 a:hover{color:var(--accent)}
+  .tool p{color:var(--muted);font-size:18.0px;margin:0}
+
+  .roster{max-width:var(--readw)}
+  .roster h3{font-family:var(--mono);font-size:16.8px;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--faint);font-weight:600;margin:24px 0 10px}
+  .roster h3:first-child{margin-top:0}
+  .person{margin:0 0 9px;font-size:18.6px}
+  .person b{font-weight:600}
+  .person span{color:var(--muted)}
+  .person-photo{display:flex;gap:22px;align-items:flex-start;margin:0 0 18px}
+  .person-photo .person{margin:0}
+  .headshot{position:relative;width:180px;height:180px;flex:none;border-radius:50%;overflow:hidden;border:1px solid var(--border);background:var(--bg-2)}
+  .headshot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+  .headshot .then{opacity:0;transition:opacity .4s ease}
+  .headshot:hover .then{opacity:1}
+  .headshot.placeholder{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:54px;font-weight:600;color:var(--muted)}
+  @media(max-width:560px){.headshot{width:130px;height:130px}}
+  .alumni{color:var(--muted);font-size:18.0px;max-width:var(--readw);margin-top:10px}
+  .alumni b{color:var(--text);font-weight:600}
+
+  .join .read h3{font-size:20.4px;font-weight:600;margin:20px 0 5px}
+  .join p{color:var(--muted);font-size:18.6px}
+  .join .read p a{font-weight:500}
+
+  footer{border-top:1px solid var(--border);padding:30px 0;color:var(--faint);font-size:16.8px}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  .foot a{color:var(--muted)}
+  .page{display:none}
+  .page.active{display:block}
+  .page > section:first-child{border-top:none}
+  .nav nav a.active{color:var(--accent)}
+  .home-cta{padding:6px 0 2px}
+  .cta-btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;padding:13px 24px;border-radius:10px;font-size:19px}
+  .cta-btn:hover{text-decoration:none;filter:brightness(1.07);color:#fff}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <nav>
+      <a href="#home" data-target="home">Home</a>
+      <a href="#research" data-target="research">Research</a>
+      <a href="#publications" data-target="publications">Publications</a>
+      <a href="#software" data-target="software">Software</a>
+      <a href="#news" data-target="news">News</a>
+      <a href="#people" data-target="people">People</a>
+      <a href="#join" data-target="join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<div class="wrap">
+  <div class="page active" data-page="home">
+<section class="intro" style="border:none">
+    <h1>Balliu Lab @ UCLA</h1>
+    <div class="read">
+      <p>We are a computational research group (est. July 2022) in the Departments of
+        <a href="https://www.uclahealth.org/departments/pathology">Pathology</a>,
+        <a href="https://compmed.ucla.edu/">Computational Medicine</a>, and
+        <a href="https://ph.ucla.edu/departments/biostatistics">Biostatistics</a> at
+        <a href="https://www.ucla.edu/">UCLA</a>. We develop novel statistical methods and
+        computational tools for analyzing high-dimensional repeated measures and intensive
+        longitudinal data, such as those arising from high-throughput genomic assays, mobile
+        phone and wearable sensors, and electronic health records.</p>
+      <p>We apply these methods to understand the genetic, molecular, cellular, and environmental
+        mechanisms underlying complex human traits and diseases, with a focus on metabolic and
+        psychiatric phenotypes.</p>
+    </div>
+    <p class="quick"><a href="https://github.com/BalliuLab"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Lab GitHub</a><a href="https://scholar.google.com/citations?user=KvHIH9nZaiUC&hl=en"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2v3.3c0 1.6 3.13 3 7 3s7-1.4 7-3v-3.3l-7 3.8-7-3.8z"/></svg>Google Scholar</a><a href="https://pubmed.ncbi.nlm.nih.gov/?term=(Balliu%2C%20Brunilda%5BAuthor%5D)%20OR%20Balliu%2C%20Bruna%5BAuthor%5D"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.6H8V12zm0 3.2h8v1.6H8v-1.6z"/></svg>PubMed</a><a href="https://twitter.com/brunilda_balliu"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 4.9c-.8.35-1.7.6-2.6.7 1-.6 1.6-1.5 2-2.6-.9.5-1.9.9-2.9 1.1-.8-.9-2-1.4-3.3-1.4-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.1 1C7.7 8.5 4.1 6.6 1.7 3.7c-.4.7-.6 1.5-.6 2.3 0 1.6.8 3 2 3.8-.7 0-1.4-.2-2-.5v.05c0 2.2 1.55 4 3.6 4.4-.4.1-.8.15-1.2.15-.3 0-.6-.03-.85-.08.6 1.8 2.25 3.1 4.25 3.15-1.55 1.2-3.5 1.95-5.65 1.95-.35 0-.7-.02-1.05-.06C2.3 19.3 4.7 20 7.3 20c8.75 0 13.55-7.25 13.55-13.55 0-.2 0-.4-.015-.6.95-.65 1.75-1.5 2.4-2.45z"/></svg>Twitter</a></p>
+  </section>
+  <div class="home-cta"><a class="cta-btn" data-target="join" href="#join">Join us →</a></div>
+<section id="news">
+    <p class="label">News</p>
+    <div class="news">
+      <div class="d">Jul 2026</div><p class="x"><span class="ni-ic">🏆</span> Karen receives the UCLA Faculty Women's Club Endowed Scholarship.</p>
+      <div class="d">Jun 2026</div><p class="x"><span class="ni-ic">📄</span> <b>FastGxC</b> published in <a href="https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00112-6">Cell Genomics</a>.</p>
+      <div class="d">Jun 2026</div><p class="x"><span class="ni-ic">🏆</span> Amaan receives the Abdelmonem A. Afifi Departmental Student Fellowship in Biostatistics.</p>
+      <div class="d">May 2026</div><p class="x"><span class="ni-ic">🏆</span> Karen receives the Dr. Ursula Mandel Scholarship, UCLA Division of Graduate Education.</p>
+      <div class="d">May 2026</div><p class="x"><span class="ni-ic">🏆</span> Timothy awarded UCLA Graduate Research Mentorship Program funding for the second time.</p>
+      <div class="d">Apr 2026</div><p class="x"><span class="ni-ic">📄</span> Adipose paper with the Pajukanta lab published in <a href="https://www.nature.com/articles/s41467-026-72248-4">Nature Communications</a>.</p>
+      <div class="d">Mar 2026</div><p class="x"><span class="ni-ic">👋</span> Ronan joins the lab.</p>
+      <div class="d">Mar 2026</div><p class="x"><span class="ni-ic">🎓</span> Faye is accepted into the Human Medical Genetics and Genomics PhD program at <a href="https://www.cuanschutz.edu/graduate-programs/human-medical-genetics-and-genomics/admissions">CU Anschutz</a>.</p>
+      <div class="d">Dec 2025</div><p class="x"><span class="ni-ic">👋</span> Charlie joins the lab.</p>
+      <div class="d">Nov 2025</div><p class="x"><span class="ni-ic">👋</span> Amaan joins the lab.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">🎤</span> Bruna attends the ASHG Annual Meeting.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">🎤</span> Bruna attends the Apple Health Research Summit as an invited speaker.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">📄</span> The Digital Mental Health Study protocol paper is published on <a href="https://pubmed.ncbi.nlm.nih.gov/41256142/">medRxiv</a>.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">👋</span> Timothy joins the lab.</p>
+      <div class="d">Sep 2025</div><p class="x"><span class="ni-ic">👋</span> Jenn joins the lab as our administrative assistant, here to save us all.</p>
+      <div class="d">Sep 2025</div><p class="x"><span class="ni-ic">🎤</span> Lena presents at the IGVF Annual Meeting.</p>
+      <div class="d">Mar 2025</div><p class="x"><span class="ni-ic">👋</span> Justin joins the lab.</p>
+      <div class="d">Dec 2024</div><p class="x"><span class="ni-ic">👋</span> Lise joins the lab.</p>
+      <div class="d">Oct 2024</div><p class="x"><span class="ni-ic">👋</span> Anthony joins the lab.</p>
+      <div class="d">Jun 2024</div><p class="x"><span class="ni-ic">👋</span> Karen joins the lab.</p>
+      <div class="d">Jun 2024</div><p class="x"><span class="ni-ic">🎤</span> Lena gives a platform presentation at ESHG.</p>
+      <div class="d">Feb 2024</div><p class="x"><span class="ni-ic">📄</span> Personalized mood prediction from smartphones published in <a href="https://doi.org/10.1038/s41746-024-01035-6">npj Digital Medicine</a>.</p>
+      <div class="d">Oct 2023</div><p class="x"><span class="ni-ic">🎤</span> Lena gives a platform presentation at ASHG.</p>
+      <div class="d">Jul 2023</div><p class="x"><span class="ni-ic">🏆</span> Bruna receives the Bruins-in-Genomics Outstanding Mentorship Award.</p>
+      <div class="d">Jun 2023</div><p class="x"><span class="ni-ic">👋</span> Lena officially joins the lab (n of 2!).</p>
+      <div class="d">Apr 2023</div><p class="x"><span class="ni-ic">👋</span> Faye joins the lab.</p>
+      <div class="d">Jan 2023</div><p class="x"><span class="ni-ic">👋</span> Stephanie joins the lab.</p>
+      <div class="d">Jan 2023</div><p class="x"><span class="ni-ic">👋</span> Yuxuan joins the lab.</p>
+      <div class="d">Jul 2022</div><p class="x"><span class="ni-ic">🎉</span> The Balliu Lab is established.</p>
+    </div>
+  </section>
+  </div>
+  <div class="page" data-page="research">
+<section id="research">
+    <p class="label">Research</p>
+    <div class="theme">
+      <div class="txt">
+        <h3>Mapping local and distal gene regulation across contexts</h3>
+        <p>Gene regulation is context dependent, changing across cell types, tissues, and conditions.
+          We build fast, powerful methods to map local (cis) and distal (trans) context-dependent
+          regulatory effects in both bulk and single-cell data.</p>
+        <p class="meta">Methods: <a href="https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00112-6">FastGxC</a> (local) and <b>crocotel</b> (distal, in progress)</p>
+      </div>
+      <figure><svg viewBox="0 0 320 200" role="img" aria-label="Context-specific genetic effects on gene expression">
+        <rect width="320" height="200" fill="var(--bg-2)"/>
+        <text x="24" y="24" font-family="ui-monospace,monospace" font-size="9.5" fill="var(--muted)">context-specific eQTL effects</text>
+        <g transform="translate(48,40)" font-family="ui-monospace,monospace" font-size="8.5">
+          <line x1="0" y1="120" x2="210" y2="120" stroke="var(--border)" stroke-width="1.4"/>
+          <line x1="0" y1="6" x2="0" y2="120" stroke="var(--border)" stroke-width="1.4"/>
+          <line x1="6" y1="112" x2="196" y2="16" stroke="var(--accent)" stroke-width="2.6"/>
+          <text x="200" y="19" fill="var(--muted)">A</text>
+          <line x1="6" y1="110" x2="196" y2="54" stroke="var(--accent)" stroke-width="2.4" opacity="0.7"/>
+          <text x="200" y="57" fill="var(--muted)">B</text>
+          <line x1="6" y1="106" x2="196" y2="92" stroke="var(--muted)" stroke-width="2" opacity="0.75"/>
+          <text x="200" y="95" fill="var(--muted)">C</text>
+          <line x1="6" y1="104" x2="196" y2="116" stroke="var(--muted)" stroke-width="2" opacity="0.45"/>
+          <text x="200" y="119" fill="var(--muted)">D</text>
+          <circle cx="54" cy="85" r="2.6" fill="var(--accent)"/><circle cx="110" cy="57" r="2.6" fill="var(--accent)"/><circle cx="162" cy="31" r="2.6" fill="var(--accent)"/>
+        </g>
+        <text x="163" y="186" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="var(--faint)">genotype</text>
+        <text x="20" y="104" transform="rotate(-90 20 104)" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="var(--faint)">expression</text>
+        <text x="243" y="104" transform="rotate(-90 243 104)" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="var(--faint)">across contexts</text>
+      </svg></figure>
+    </div>
+    <div class="theme">
+      <div class="txt">
+        <h3>Linking gene regulation to complex disease</h3>
+        <p>Most disease-associated variants lie in noncoding DNA and act through gene regulation.
+          We build methods that predict the genetically regulated part of gene expression,
+          separating it into context-shared and context-specific components. Used in
+          transcriptome-wide association studies, these predictors uncover more candidate genes
+          for complex traits across tissues and cell types.</p>
+        <p class="meta">Methods: <a href="https://doi.org/10.1038/s41467-022-33212-0">CONTENT</a> and <b>scMAGNET</b> (in progress)</p>
+      </div>
+      <figure><svg viewBox="0 0 320 200" role="img" aria-label="Multi-context model linking gene regulation to disease genes">
+        <rect width="320" height="200" fill="var(--bg-2)"/>
+        <g font-family="ui-monospace,monospace" font-size="8.5" fill="var(--muted)">
+          <rect x="20" y="46" width="70" height="24" rx="4" fill="none" stroke="var(--border)"/><text x="55" y="61" text-anchor="middle">context 1</text>
+          <rect x="20" y="78" width="70" height="24" rx="4" fill="none" stroke="var(--border)"/><text x="55" y="93" text-anchor="middle">context 2</text>
+          <rect x="20" y="110" width="70" height="24" rx="4" fill="none" stroke="var(--border)"/><text x="55" y="125" text-anchor="middle">context 3</text>
+        </g>
+        <path d="M92 58 L132 78 M92 90 L132 90 M92 122 L132 102" stroke="var(--border)" stroke-width="1.4" fill="none"/>
+        <rect x="132" y="70" width="58" height="40" rx="7" fill="none" stroke="var(--accent)" stroke-width="1.8"/>
+        <text x="161" y="86" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8.5" fill="var(--accent)">shared +</text>
+        <text x="161" y="99" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8.5" fill="var(--accent)">specific</text>
+        <path d="M190 90 L222 90" stroke="var(--border)" stroke-width="1.4"/>
+        <g transform="translate(226,54)">
+          <line x1="0" y1="74" x2="74" y2="74" stroke="var(--border)" stroke-width="1.4"/>
+          <line x1="4" y1="74" x2="4" y2="62" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
+          <line x1="12" y1="74" x2="12" y2="56" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
+          <line x1="20" y1="74" x2="20" y2="66" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
+          <line x1="30" y1="74" x2="30" y2="30" stroke="var(--accent)" stroke-width="1.8"/>
+          <line x1="36" y1="74" x2="36" y2="14" stroke="var(--accent)" stroke-width="2"/>
+          <line x1="42" y1="74" x2="42" y2="40" stroke="var(--accent)" stroke-width="1.8"/>
+          <line x1="52" y1="74" x2="52" y2="60" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
+          <line x1="60" y1="74" x2="60" y2="64" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
+          <line x1="68" y1="74" x2="68" y2="58" stroke="var(--muted)" stroke-width="1.6" opacity="0.5"/>
+          <circle cx="36" cy="12" r="2.4" fill="var(--accent)"/>
+        </g>
+        <text x="263" y="150" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="var(--faint)">disease genes</text>
+      </svg></figure>
+    </div>
+    <div class="theme">
+      <div class="txt">
+        <h3>Environmental modulators of genetic risk</h3>
+        <p>Human traits are shaped by both genes and environment, yet their interplay is poorly
+          understood. We couple controlled cellular perturbations with population-scale RNA and
+          ATAC sequencing and new gene by environment methods to find modifiable exposures that
+          mediate genetic risk.</p>
+        <p class="meta">Gene by environment, cellular perturbation (<a href="https://doi.org/10.1016/j.ajhg.2021.08.014">paper</a>)</p>
+      </div>
+      <figure><img src="media/gxe.jpg" alt="Gene by environment figure"></figure>
+    </div>
+    <div class="theme">
+      <div class="txt">
+        <h3>Digital biomarkers from consumer devices</h3>
+        <p>Personal devices give continuous, low-burden, objective measures of behavior and
+          physiology. We turn passive smartphone and wearable data into validated, context-aware
+          digital biomarkers linked to clinical outcomes and genetics, including personalized
+          prediction of depressive mood.</p>
+        <p class="meta"><a href="https://doi.org/10.1038/s41746-024-01035-6">STAND</a> and the
+          <a href="https://pubmed.ncbi.nlm.nih.gov/41256142/">UCLA-Apple Digital Mental Health Study</a></p>
+      </div>
+      <figure><img src="media/digital.jpg" alt="Digital phenotyping figure"></figure>
+    </div>
+  </section>
+  </div>
+  <div class="page" data-page="publications">
+<section id="publications">
+    <p class="label">Selected publications</p>
+    <div class="pub">
+      <div class="yr">2026</div>
+      <div>
+        <p class="t">FastGxC: fast and powerful context-specific eQTL mapping in bulk and single-cell data</p>
+        <p class="a">Krockenberger L, … Zaitlen N, <b>Balliu B</b>. <span class="v">Cell Genomics</span><span class="role">senior author</span></p>
+        <p class="lnk"><a href="https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00112-6">Paper</a><a href="https://github.com/BalliuLab/FastGxC">Software</a></p>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2026</div>
+      <div>
+        <p class="t">Adipose single-cell epigenome and transcriptome localize genetic risk for cardiometabolic disease and accelerated aging</p>
+        <p class="a">Lee SHT, Kar A, … <b>Balliu B</b>*, Pajukanta P*. <span class="v">Nature Communications</span><span class="role">co-last author</span></p>
+        <p class="lnk"><a href="https://www.nature.com/articles/s41467-026-72248-4">Paper</a></p>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2024</div>
+      <div>
+        <p class="t">Personalized mood prediction from patterns of behavior collected with smartphones</p>
+        <p class="a"><b>Balliu B</b>*, Douglas C, Seok D, … Sankararaman S, Flint J*. <span class="v">npj Digital Medicine</span><span class="role">co-corresponding</span></p>
+        <p class="lnk"><a href="https://doi.org/10.1038/s41746-024-01035-6">Paper</a><a href="https://github.com/BrunildaBalliu/stand_mood_prediction">Code</a></p>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <p class="t">Comparing self-reported and physiological sleep quality from consumer devices to depression and neurocognitive performance</p>
+        <p class="a">Akre S, Cohen ZD, … <b>Balliu B</b>, Craske MG, Bui AAT. <span class="v">npj Digital Medicine</span></p>
+        <p class="lnk"><a href="https://doi.org/10.1038/s41746-025-01493-6">Paper</a></p>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <p class="t">Assessing the feasibility of large-scale digital sensing for depression and anxiety: the Digital Mental Health Study</p>
+        <p class="a">Douglas CS, Congdon E, Huang C, Seok D, Cohen ZD, … <b>Balliu B</b>. <span class="v">medRxiv</span></p>
+        <p class="lnk"><a href="https://pubmed.ncbi.nlm.nih.gov/41256142/">Manuscript</a></p>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2022</div>
+      <div>
+        <p class="t">Multi-context genetic modeling of transcriptional regulation resolves novel disease loci</p>
+        <p class="a">Thompson M, Gordon MG, Lu A, … <b>Balliu B</b>, Zaitlen N. <span class="v">Nature Communications</span></p>
+        <p class="lnk"><a href="https://doi.org/10.1038/s41467-022-33212-0">Paper</a><a href="https://github.com/cozygene/CONTENT">Software</a></p>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2021</div>
+      <div>
+        <p class="t">An integrated approach to identify environmental modulators of genetic risk factors for complex traits</p>
+        <p class="a"><b>Balliu B</b>*, Carcamo-Orive I*, Gloudemans MJ, … Knowles JW, Montgomery SB. <span class="v">American Journal of Human Genetics</span><span class="role">co-first</span></p>
+        <p class="lnk"><a href="https://doi.org/10.1016/j.ajhg.2021.08.014">Paper</a><a href="https://github.com/BrunildaBalliu/PerturbationGxE">Code</a></p>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2019</div>
+      <div>
+        <p class="t">Genetic regulation of gene expression and splicing during a 10-year period of human aging</p>
+        <p class="a"><b>Balliu B</b>, Durrant M, de Goede O, … Ingelsson E, Montgomery SB. <span class="v">Genome Biology</span><span class="role">first author</span></p>
+        <p class="lnk"><a href="https://doi.org/10.1186/s13059-019-1840-y">Paper</a></p>
+      </div>
+    </div>
+    <p class="allpubs"><a href="#">Full list of publications</a> · <a href="https://scholar.google.com/citations?user=KvHIH9nZaiUC&hl=en">Google Scholar</a></p>
+  </section>
+  </div>
+  <div class="page" data-page="software">
+<section id="software">
+    <p class="label">Software</p>
+    <div class="tool">
+      <h3><a href="https://github.com/BalliuLab/FastGxC">FastGxC ↗</a></h3>
+      <p>Fast, powerful mapping of context-specific (cis) regulatory effects from bulk and
+        single-cell data. Up to 9 times more powerful, reducing computation from years to minutes.</p>
+    </div>
+    <div class="tool">
+      <h3><a href="https://github.com/cozygene/CONTENT">CONTENT ↗</a></h3>
+      <p>Multi-context transcriptome-wide association studies (TWAS), developed with collaborators
+        as an extension of FastGxC.</p>
+    </div>
+  </section>
+  </div>
+  <div class="page" data-page="news">
+<section id="news">
+    <p class="label">News</p>
+    <div class="news" style="max-height:none;overflow:visible;padding-right:0">
+      <div class="d">Jul 2026</div><p class="x"><span class="ni-ic">🏆</span> Karen receives the UCLA Faculty Women's Club Endowed Scholarship.</p>
+      <div class="d">Jun 2026</div><p class="x"><span class="ni-ic">📄</span> <b>FastGxC</b> published in <a href="https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00112-6">Cell Genomics</a>.</p>
+      <div class="d">Jun 2026</div><p class="x"><span class="ni-ic">🏆</span> Amaan receives the Abdelmonem A. Afifi Departmental Student Fellowship in Biostatistics.</p>
+      <div class="d">May 2026</div><p class="x"><span class="ni-ic">🏆</span> Karen receives the Dr. Ursula Mandel Scholarship, UCLA Division of Graduate Education.</p>
+      <div class="d">May 2026</div><p class="x"><span class="ni-ic">🏆</span> Timothy awarded UCLA Graduate Research Mentorship Program funding for the second time.</p>
+      <div class="d">Apr 2026</div><p class="x"><span class="ni-ic">📄</span> Adipose paper with the Pajukanta lab published in <a href="https://www.nature.com/articles/s41467-026-72248-4">Nature Communications</a>.</p>
+      <div class="d">Mar 2026</div><p class="x"><span class="ni-ic">👋</span> Ronan joins the lab.</p>
+      <div class="d">Mar 2026</div><p class="x"><span class="ni-ic">🎓</span> Faye is accepted into the Human Medical Genetics and Genomics PhD program at <a href="https://www.cuanschutz.edu/graduate-programs/human-medical-genetics-and-genomics/admissions">CU Anschutz</a>.</p>
+      <div class="d">Dec 2025</div><p class="x"><span class="ni-ic">👋</span> Charlie joins the lab.</p>
+      <div class="d">Nov 2025</div><p class="x"><span class="ni-ic">👋</span> Amaan joins the lab.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">🎤</span> Bruna attends the ASHG Annual Meeting.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">🎤</span> Bruna attends the Apple Health Research Summit as an invited speaker.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">📄</span> The Digital Mental Health Study protocol paper is published on <a href="https://pubmed.ncbi.nlm.nih.gov/41256142/">medRxiv</a>.</p>
+      <div class="d">Oct 2025</div><p class="x"><span class="ni-ic">👋</span> Timothy joins the lab.</p>
+      <div class="d">Sep 2025</div><p class="x"><span class="ni-ic">👋</span> Jenn joins the lab as our administrative assistant, here to save us all.</p>
+      <div class="d">Sep 2025</div><p class="x"><span class="ni-ic">🎤</span> Lena presents at the IGVF Annual Meeting.</p>
+      <div class="d">Mar 2025</div><p class="x"><span class="ni-ic">👋</span> Justin joins the lab.</p>
+      <div class="d">Dec 2024</div><p class="x"><span class="ni-ic">👋</span> Lise joins the lab.</p>
+      <div class="d">Oct 2024</div><p class="x"><span class="ni-ic">👋</span> Anthony joins the lab.</p>
+      <div class="d">Jun 2024</div><p class="x"><span class="ni-ic">👋</span> Karen joins the lab.</p>
+      <div class="d">Jun 2024</div><p class="x"><span class="ni-ic">🎤</span> Lena gives a platform presentation at ESHG.</p>
+      <div class="d">Feb 2024</div><p class="x"><span class="ni-ic">📄</span> Personalized mood prediction from smartphones published in <a href="https://doi.org/10.1038/s41746-024-01035-6">npj Digital Medicine</a>.</p>
+      <div class="d">Oct 2023</div><p class="x"><span class="ni-ic">🎤</span> Lena gives a platform presentation at ASHG.</p>
+      <div class="d">Jul 2023</div><p class="x"><span class="ni-ic">🏆</span> Bruna receives the Bruins-in-Genomics Outstanding Mentorship Award.</p>
+      <div class="d">Jun 2023</div><p class="x"><span class="ni-ic">👋</span> Lena officially joins the lab (n of 2!).</p>
+      <div class="d">Apr 2023</div><p class="x"><span class="ni-ic">👋</span> Faye joins the lab.</p>
+      <div class="d">Jan 2023</div><p class="x"><span class="ni-ic">👋</span> Stephanie joins the lab.</p>
+      <div class="d">Jan 2023</div><p class="x"><span class="ni-ic">👋</span> Yuxuan joins the lab.</p>
+      <div class="d">Jul 2022</div><p class="x"><span class="ni-ic">🎉</span> The Balliu Lab is established.</p>
+    </div>
+  </section>
+  </div>
+  <div class="page" data-page="people">
+<section id="people">
+    <p class="label">People</p>
+    <div class="roster">
+      <h3>Principal Investigator</h3>
+      <div class="person-photo">
+      <span class="headshot" title="hover for then and now"><img class="now" src="media/bruna_now.jpg" alt="Brunilda Balliu now" style="object-position:50% 45%"><img class="then" src="media/bruna_then.jpg" alt="Brunilda Balliu then" style="object-position:50% 16%"></span>
+      <p class="person"><b>Brunilda Balliu</b><span> is an Assistant Professor in the Departments of
+        <a href="https://www.uclahealth.org/departments/pathology">Pathology &amp; Laboratory Medicine</a>,
+        <a href="https://compmed.ucla.edu/">Computational Medicine</a>, Human Genetics, and Biostatistics at UCLA. She
+        received a BSc in Statistics from the
+        <a href="https://www.dept.aueb.gr/en/stat/content/department-statistics">Athens University of Economics and Business</a>
+        (Greece) and a PhD in <a href="https://openaccess.leidenuniv.nl/handle/1887/35195">Statistical Genetics</a> from
+        Leiden University Medical Center (Netherlands), advised by Prof. Dr.
+        <a href="http://jeaninehouwing.com/">Jeanine Houwing-Duistermaat</a> and
+        <a href="http://s-boehringer.org/">Stefan Boehringer</a>. She completed postdoctoral research at Stanford University
+        with <a href="http://montgomerylab.stanford.edu/">Stephen Montgomery</a>, focusing on methods to understand the role
+        of inherited variation in molecular and complex traits. She joined UCLA in 2018 as an Independent Fellow in
+        <a href="https://compmed.ucla.edu/">Computational Medicine</a> and later as faculty. Outside work, she has been
+        obsessed with salsa dancing since she saw
+        <a href="https://www.youtube.com/watch?v=NkP6d0csYfM&amp;ab_channel=BoscoOrtega">these two dancing</a>!</span></p>
+      </div>
+      <h3>Doctoral students</h3>
+      <div class="person-photo">
+      <span class="headshot placeholder">LK</span>
+      <p class="person"><b>Lena Krockenberger</b><span> is a PhD candidate in the Bioinformatics Interdepartmental Graduate Program at UCLA. Lena earned a BS in Biology with a specialization in Bioinformatics from UC San Diego in 2022. Lena joined the Balliu Lab in June 2023 and works in statistical genetics and computational genomics, developing methods to understand how genetic variation regulates gene expression across biological contexts. Lena is currently developing methods to detect trans-genetic regulatory effects and to uncover the molecular mechanisms linking genetic variation to complex disease. Outside the lab, Lena enjoys soccer, running, and trying new restaurants throughout Los Angeles.</span></p>
+      </div>
+      <div class="person-photo">
+      <span class="headshot" title="hover for then and now"><img class="now" src="media/karen_now.jpg" alt="Karen Li now" style="object-position:50% 28%"><img class="then" src="media/karen_then.jpg" alt="Karen Li then" style="object-position:50% 34%"></span>
+      <p class="person"><b>Karen Li</b><span> is a Biomathematics PhD student in the Department of Computational Medicine. She joined the Balliu Lab in June 2024. She received a BA in Mathematics and Statistics from the University of California, Santa Barbara (2022) and an MS in Biostatistics at Yale University (2024). She is broadly interested in developing statistical and computational methods in statistical genetics and genomics in bulk and single-cell data. Her current work focuses on developing a fine-mapping framework to identify candidate causal genes and contexts for complex human traits and diseases. Outside of research, she enjoys playing tennis, collecting and listening to vinyl records, and daydreaming about relaxing on a beach in the Maldives!</span></p>
+      </div>
+      <div class="person-photo">
+      <span class="headshot placeholder">TS</span>
+      <p class="person"><b>Timothy Shen</b><span> is a Biostatistics PhD student. Timothy joined the Balliu Lab in October 2025.</span></p>
+      </div>
+      <div class="person-photo">
+      <span class="headshot"><img class="now" src="media/amaan_then.jpg" alt="Amaan Jogia-Sattar" style="object-position:50% 16%"><img class="then" src="media/amaan_then.jpg" alt="Amaan Jogia-Sattar" style="object-position:50% 16%"></span>
+      <p class="person"><b>Amaan Jogia-Sattar</b><span> is a Biostatistics PhD student in the UCLA Fielding School of Public Health. Amaan received an MS in Biostatistics from UCLA in 2026 after a BA in Public Health with a minor in Data Science from UC Berkeley in 2024. Amaan joined the Balliu Lab in November 2025 and develops statistical and computational methods for high-dimensional molecular data in statistical genetics and functional genomics, currently focusing on statistical modeling of dynamic genetic regulation during cellular reprogramming using single-cell multiome data. Outside of research, Amaan enjoys tennis, exploring Los Angeles, and spending time with Louie, the family dog.</span></p>
+      </div>
+      <div class="person-photo">
+      <span class="headshot placeholder">RB</span>
+      <p class="person"><b>Ronan Bennett</b><span> is a Bioinformatics PhD student. Ronan joined the Balliu Lab in March 2026.</span></p>
+      </div>
+      <h3>Undergraduate researchers</h3>
+      <div class="person-photo">
+      <span class="headshot placeholder">LT</span>
+      <p class="person"><b>Lise Tucker</b><span> is a Computational and Systems Biology undergraduate. Lise joined the Balliu Lab in December 2024 and works on novel cis-eQTL mapping methods for single-cell RNA-seq data.</span></p>
+      </div>
+      <div class="person-photo">
+      <span class="headshot placeholder">JN</span>
+      <p class="person"><b>Justin Ng</b><span> is a Statistics and Data Science undergraduate. Justin joined the Balliu Lab in March 2025 and works on novel cis-eQTL mapping methods for single-cell omics data.</span></p>
+      </div>
+      <div class="person-photo">
+      <span class="headshot placeholder">CW</span>
+      <p class="person"><b>Charlie Wang</b><span> is a Statistics and Data Science undergraduate. Charlie joined the Balliu Lab in December 2025 and works on novel cis-eQTL mapping methods for single-cell omics data.</span></p>
+      </div>
+      <h3>Staff</h3>
+      <div class="person-photo">
+      <span class="headshot placeholder">JS</span>
+      <p class="person"><b>Jennifer Shedrack</b><span> is the lab’s administrative assistant. Jenn joined in September 2025.</span></p>
+      </div>
+      <h3>Alumni</h3>
+      <p class="person"><b>Feiyang Huang</b><span>, Master student in Biostatistics. April 2023 to October 2025. Worked on statistical methods for leveraging digital behavioral phenotypes to predict mood disorders. Now a PhD student at CU Anschutz.</span></p>
+      <p class="person"><b>Stephanie Weber</b><span>, Master student in Human Genetics and Genomic Data Analytics at Keck Graduate Institute. January 2023 to April 2024. Worked on methods for allele-specific expression analyses. Now Business Development Associate at Fulgent Genetics.</span></p>
+      <p class="person"><b>Yuxuan Xia</b><span>, Undergraduate student in Computational and Systems Biology. January 2023 to April 2024. Worked on methods for QTL mapping in single-cell data. Now a DVM candidate at Cornell.</span></p>
+      <p class="person"><b>Anthony Zhao</b><span>, Undergraduate student in Computer Science. October 2024 to January 2026. Worked on novel multiple-testing methods and methods for mapping regulatory effects in single-cell omics data.</span></p>
+    </div>
+  </section>
+  </div>
+  <div class="page" data-page="join">
+<section id="join" class="join">
+    <p class="label">Join us</p>
+    <div class="read">
+      <h3>Postdoctoral researchers</h3>
+      <p>We have an opening for quantitatively skilled PhDs to study the impact of genomic variation on
+        the gene regulatory networks of reprogramming as part of the
+        <a href="https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium">IGVF consortium</a>
+        (shared with the Zaitlen lab). If interested, <a href="mailto:bballiu@ucla.edu">email me</a> with a short
+        statement of research interests, your CV, and contact information for three references.</p>
+      <h3>Graduate students</h3>
+      <p>We take UCLA students from Bioinformatics, Biomathematics, Biostatistics, Genetics and Genomics,
+        Neuroscience, and related programs. We mentor students with a strong quantitative foundation who
+        want to develop new methods, as well as those from diverse backgrounds interested in analyzing
+        large-scale datasets. If you would be a good fit, <a href="mailto:bballiu@ucla.edu">email me</a> with your
+        research interests and CV.</p>
+      <h3>Undergraduate students</h3>
+      <p>We are not accepting undergraduates this quarter. If you think you might be a good fit in the
+        future, <a href="mailto:bballiu@ucla.edu">email me</a> with your research interests and CV.</p>
+    </div>
+  </section>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>Balliu Lab @ UCLA · Departments of Pathology, Computational Medicine and Biostatistics · Los Angeles, CA</div>
+  </div>
+</footer>
+<script>
+  function showPage(n){
+    var ok=false;
+    document.querySelectorAll('.page').forEach(function(p){var m=p.dataset.page===n;p.classList.toggle('active',m);if(m)ok=true;});
+    if(!ok){n='home';document.querySelector('.page[data-page="home"]').classList.add('active');}
+    document.querySelectorAll('.nav nav a').forEach(function(a){a.classList.toggle('active',a.dataset.target===n);});
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('[data-target]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();var n=a.dataset.target;showPage(n);history.replaceState(null,'','#'+n);});
+  });
+  showPage((location.hash||'#home').slice(1));
+</script>
+</body>
+</html>
