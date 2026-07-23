@@ -102,8 +102,9 @@
   .person-photo .person{margin:0}
   .headshot{position:relative;width:180px;height:180px;flex:none;border-radius:50%;overflow:hidden;border:1px solid var(--border);background:var(--bg-2)}
   .headshot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
-  .headshot .then{opacity:0;transition:opacity .4s ease}
-  .headshot:hover .then{opacity:1}
+  .headshot .then{opacity:0;animation:nowthen 8s ease-in-out infinite}
+  @keyframes nowthen{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
+  @media(prefers-reduced-motion:reduce){.headshot .then{animation:none}}
   .headshot.placeholder{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:54px;font-weight:600;color:var(--muted)}
   @media(max-width:560px){.headshot{width:130px;height:130px}}
   .alumni{color:var(--muted);font-size:18.0px;max-width:var(--readw);margin-top:10px}
@@ -381,7 +382,7 @@
     <div class="roster">
       <h3>Principal Investigator</h3>
       <div class="person-photo">
-      <span class="headshot" title="hover for then and now"><img class="now" src="media/bruna_now.jpg" alt="Brunilda Balliu now" style="object-position:50% 45%"><img class="then" src="media/bruna_then.jpg" alt="Brunilda Balliu then" style="object-position:50% 16%"></span>
+      <span class="headshot" title="then and now"><img class="now" src="media/bruna_now.jpg" alt="Brunilda Balliu now" style="object-position:50% 45%"><img class="then" src="media/bruna_then.jpg" alt="Brunilda Balliu then" style="object-position:50% 16%"></span>
       <p class="person"><b>Brunilda Balliu</b><span> is an Assistant Professor in the Departments of
         <a href="https://www.uclahealth.org/departments/pathology">Pathology &amp; Laboratory Medicine</a>,
         <a href="https://compmed.ucla.edu/">Computational Medicine</a>, Human Genetics, and Biostatistics at UCLA. She
@@ -403,7 +404,7 @@
       <p class="person"><b>Lena Krockenberger</b><span> is a PhD candidate in the Bioinformatics Interdepartmental Graduate Program at UCLA. Lena earned a BS in Biology with a specialization in Bioinformatics from UC San Diego in 2022. Lena joined the Balliu Lab in June 2023 and works in statistical genetics and computational genomics, developing methods to understand how genetic variation regulates gene expression across biological contexts. Lena is currently developing methods to detect trans-genetic regulatory effects and to uncover the molecular mechanisms linking genetic variation to complex disease. Outside the lab, Lena enjoys soccer, running, and trying new restaurants throughout Los Angeles.</span></p>
       </div>
       <div class="person-photo">
-      <span class="headshot" title="hover for then and now"><img class="now" src="media/karen_now.jpg" alt="Karen Li now" style="object-position:50% 28%"><img class="then" src="media/karen_then.jpg" alt="Karen Li then" style="object-position:50% 34%"></span>
+      <span class="headshot" title="then and now"><img class="now" src="media/karen_now.jpg" alt="Karen Li now" style="object-position:50% 28%"><img class="then" src="media/karen_then.jpg" alt="Karen Li then" style="object-position:50% 34%;animation-delay:-4s"></span>
       <p class="person"><b>Karen Li</b><span> is a Biomathematics PhD student in the Department of Computational Medicine. She joined the Balliu Lab in June 2024. She received a BA in Mathematics and Statistics from the University of California, Santa Barbara (2022) and an MS in Biostatistics at Yale University (2024). She is broadly interested in developing statistical and computational methods in statistical genetics and genomics in bulk and single-cell data. Her current work focuses on developing a fine-mapping framework to identify candidate causal genes and contexts for complex human traits and diseases. Outside of research, she enjoys playing tennis, collecting and listening to vinyl records, and daydreaming about relaxing on a beach in the Maldives!</span></p>
       </div>
       <div class="person-photo">
