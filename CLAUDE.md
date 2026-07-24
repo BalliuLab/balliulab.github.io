@@ -1,6 +1,8 @@
 # CLAUDE.md — Balliu Lab @ UCLA website
 
-Source for the lab website, live at <https://brunildaballiu.github.io> (private repo).
+Source for the lab website, live at <https://balliulab.github.io> (public org repo `BalliuLab/balliulab.github.io`).
+
+The site moved here from `brunildaballiu.github.io`, which is now just a redirect to this URL. Push site changes to the **`balliulab`** remote (`git@github.com:BalliuLab/balliulab.github.io.git`), not to `origin` (origin is the old redirect repo).
 
 ## Architecture
 - **Static, no build step.** `index.html` is the entire site: markup, an inline `<style>`, and a small `<script>`.
@@ -10,8 +12,11 @@ Source for the lab website, live at <https://brunildaballiu.github.io> (private 
 
 ## Making changes
 1. Edit `index.html` (and drop any new images into `media/`).
-2. Commit to `main` and push. GitHub Pages republishes in about one to two minutes.
-3. Verify at <https://brunildaballiu.github.io>. This is the LIVE site, so pushes to `main` are public immediately.
+2. Commit to `main` and push to `balliulab`. GitHub Pages republishes in about one to two minutes.
+3. Verify at <https://balliulab.github.io>. This is the LIVE site, so pushes are public immediately.
+
+## Reading Competition page
+The `reading` page shows a leaderboard (papers read per person) and a "papers we are reading" list, fed live from a public Google Sheet (one row per paper: Name, Paper, Link, Date). The page fetches the sheet's gviz CSV endpoint at load, so standings update when the sheet is edited, no code push needed. The sheet URL is the `SHEET` constant in the reading page's script.
 
 ## Conventions
 - **Writing style:** no dashes (em, en, or a spaced hyphen) and no semicolons in visible copy. Use commas, periods, parentheses, or "and".
