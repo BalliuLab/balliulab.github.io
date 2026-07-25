@@ -121,9 +121,11 @@
   .page.active{display:block}
   .page > section:first-child{border-top:none}
   .nav nav a.active{color:var(--accent)}
-  .home-cta{padding:6px 0 2px}
+  .home-cta{padding:6px 0 2px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
   .cta-btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;padding:13px 24px;border-radius:10px;font-size:19px}
   .cta-btn:hover{text-decoration:none;filter:brightness(1.07);color:#fff}
+  .cta-alt{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  .cta-alt:hover{background:transparent;color:var(--accent-ink);border-color:var(--accent-ink);filter:none}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:var(--readw);margin-bottom:26px}
   .contact-grid h3{font-family:var(--serif);font-size:24px;font-weight:600;margin:0 0 10px}
   .contact-grid p{color:var(--muted);font-size:18.6px;line-height:1.7}
@@ -169,7 +171,7 @@
       <a href="#publications" data-target="publications">Publications</a>
       <a href="#software" data-target="software">Software</a>
       <a href="#news" data-target="news">News</a>
-      <a href="#reading" data-target="reading">Reading</a>
+      <a href="#reading" data-target="reading">Reading Club</a>
       <a href="#join" data-target="join">Join</a>
       <a href="#contact" data-target="contact">Contact</a>
     </nav>
@@ -196,7 +198,7 @@
     </div>
     <p class="quick"><a href="https://github.com/BalliuLab"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Lab GitHub</a><a href="https://scholar.google.com/citations?user=KvHIH9nZaiUC&hl=en"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2v3.3c0 1.6 3.13 3 7 3s7-1.4 7-3v-3.3l-7 3.8-7-3.8z"/></svg>Google Scholar</a><a href="https://pubmed.ncbi.nlm.nih.gov/?term=(Balliu%2C%20Brunilda%5BAuthor%5D)%20OR%20Balliu%2C%20Bruna%5BAuthor%5D"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.6H8V12zm0 3.2h8v1.6H8v-1.6z"/></svg>PubMed</a><a href="https://twitter.com/brunilda_balliu"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 4.9c-.8.35-1.7.6-2.6.7 1-.6 1.6-1.5 2-2.6-.9.5-1.9.9-2.9 1.1-.8-.9-2-1.4-3.3-1.4-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.1 1C7.7 8.5 4.1 6.6 1.7 3.7c-.4.7-.6 1.5-.6 2.3 0 1.6.8 3 2 3.8-.7 0-1.4-.2-2-.5v.05c0 2.2 1.55 4 3.6 4.4-.4.1-.8.15-1.2.15-.3 0-.6-.03-.85-.08.6 1.8 2.25 3.1 4.25 3.15-1.55 1.2-3.5 1.95-5.65 1.95-.35 0-.7-.02-1.05-.06C2.3 19.3 4.7 20 7.3 20c8.75 0 13.55-7.25 13.55-13.55 0-.2 0-.4-.015-.6.95-.65 1.75-1.5 2.4-2.45z"/></svg>Twitter</a></p>
   </section>
-  <div class="home-cta"><a class="cta-btn" data-target="join" href="#join">Join us →</a></div>
+  <div class="home-cta"><a class="cta-btn" data-target="join" href="#join">Join us →</a><a class="cta-btn cta-alt" data-target="reading" href="#reading">Papers we are reading →</a></div>
 <section id="news">
     <p class="label">News</p>
     <div class="news">
@@ -490,7 +492,7 @@
   </div>
   <div class="page" data-page="reading">
     <section id="reading">
-    <p class="label">Reading Competition</p>
+    <p class="label">Reading Club</p>
     <p class="read" style="color:var(--muted);font-size:18.6px">Who has read the most papers? Live standings from our lab reading tracker.</p>
     <div class="leaderboard" id="leaderboard"><p class="lb-loading">Loading standings&hellip;</p></div>
     <p class="label" style="margin-top:46px">Papers we are reading</p>
