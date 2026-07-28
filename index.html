@@ -152,6 +152,20 @@
   .lb-name{font-size:20px;font-weight:600;flex:1}
   .lb-count{font-family:var(--mono);font-size:21px;color:var(--accent);font-weight:600}
   .lb-count small{color:var(--muted);font-weight:400;font-size:13px}
+  .rc-top{display:grid;grid-template-columns:1.12fr 1fr;gap:44px;max-width:var(--readw);align-items:start}
+  .rc-col{min-width:0}
+  .label.sub{font-size:15px;margin:0 0 12px}
+  @media(max-width:720px){.rc-top{grid-template-columns:1fr;gap:32px}}
+  .ch-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--border)}
+  .ch-row:first-child{border-top:none}
+  .ch-month{font-family:var(--mono);font-size:13.5px;color:var(--faint);width:92px;flex:none}
+  .ch-pics{display:flex;flex:none}
+  .ch-pic{width:40px;height:40px;border-radius:50%;overflow:hidden;border:1px solid var(--border);background:var(--bg-2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:15px;color:var(--muted);margin-left:-8px}
+  .ch-pic:first-child{margin-left:0}
+  .ch-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+  .ch-name{font-size:16px;font-weight:600;flex:1;line-height:1.25}
+  .ch-n{font-family:var(--mono);font-size:15px;color:var(--accent);font-weight:600;flex:none}
+  .ch-n small{color:var(--muted);font-weight:400;font-size:12px}
   .lb-loading{color:var(--faint)}
   .paperlist{max-width:var(--readw)}
   .pl-item{padding:14px 0;border-top:1px solid var(--border)}
@@ -499,8 +513,17 @@
   <div class="page" data-page="reading">
     <section id="reading">
     <p class="label">Reading Club</p>
-    <p class="read" style="color:var(--muted);font-size:18.6px">Who has read the most papers? Live standings from our lab reading tracker.</p>
-    <div class="leaderboard" id="leaderboard"><p class="lb-loading">Loading standings&hellip;</p></div>
+    <p class="read" style="color:var(--muted);font-size:18.6px">Live standings from our lab reading tracker this month (since August 2026).</p>
+    <div class="rc-top">
+      <div class="rc-col">
+        <p class="label sub">This month</p>
+        <div class="leaderboard" id="leaderboard"><p class="lb-loading">Loading standings&hellip;</p></div>
+      </div>
+      <div class="rc-col">
+        <p class="label sub">Monthly champions</p>
+        <div class="champions" id="champions"><p class="lb-loading">Loading&hellip;</p></div>
+      </div>
+    </div>
     <p class="label" style="margin-top:46px">Papers we are reading</p>
     <div class="paperlist" id="paperlist"></div>
     </section>
@@ -567,21 +590,27 @@
   document.querySelectorAll('a.eml').forEach(function(a){var e=a.dataset.u+'@'+a.dataset.d;a.href='mailto:'+e;if(!a.textContent.trim())a.textContent=e;});
   (function(){var b=document.querySelector('.banner');if(!b)return;var s=b.querySelectorAll('.bslide'),d=b.querySelectorAll('.bdot'),i=0,t;function go(n){s[i].classList.remove('active');if(d[i])d[i].classList.remove('active');i=(n+s.length)%s.length;s[i].classList.add('active');if(d[i])d[i].classList.add('active');}d.forEach(function(x,k){x.addEventListener('click',function(){go(k);start();});});function start(){clearInterval(t);t=setInterval(function(){go(i+1);},5000);}start();})();
   (function(){
-    var lb=document.getElementById('leaderboard'), pl=document.getElementById('paperlist'); if(!lb)return;
+    var lb=document.getElementById('leaderboard'), pl=document.getElementById('paperlist'), ce=document.getElementById('champions'); if(!lb)return;
     var SHEET="https://docs.google.com/spreadsheets/d/1aeEZi6cf8i6C1KOP96BTgSJArbGUlbQP6voPwf2VfyE/gviz/tq?tqx=out:csv";
-    var PHOTOS={bruna:'media/bruna_now.jpg',brunilda:'media/bruna_now.jpg',karen:'media/karen_now.jpg',lena:'media/lena_now.jpg',amaan:'media/amaan_then.jpg',tim:'media/tim_now.jpg',timothy:'media/tim_now.jpg'};
-    var medals=['🥇','🥈','🥉'];
+    var PHOTOS={bruna:'media/bruna_now.jpg',brunilda:'media/bruna_now.jpg',karen:'media/karen_now.jpg',lena:'media/lena_now.jpg',amaan:'media/amaan_then.jpg',tim:'media/tim_now.jpg',timothy:'media/tim_now.jpg',lise:'media/lise_now.jpg',charlie:'media/charlie_now.jpg',justin:'media/justin_now.jpg'};
+    var medals=['\U0001F947','\U0001F948','\U0001F949'];
+    var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
     function esc(s){return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
     function initials(n){return n.split(/\s+/).map(function(w){return w[0]||'';}).join('').slice(0,2).toUpperCase();}
+    function pic(nm,cls){var key=nm.trim().split(/\s+/)[0].toLowerCase(),p=PHOTOS[key];return p?'<span class="'+cls+'"><img src="'+p+'" alt=""></span>':'<span class="'+cls+'">'+esc(initials(nm))+'</span>';}
     function parseCSV(text){var rows=[],row=[],cur='',q=false;for(var i=0;i<text.length;i++){var c=text[i];if(q){if(c=='"'){if(text[i+1]=='"'){cur+='"';i++;}else{q=false;}}else{cur+=c;}}else{if(c=='"'){q=true;}else if(c==','){row.push(cur);cur='';}else if(c=='\n'){row.push(cur);rows.push(row);row=[];cur='';}else if(c=='\r'){}else{cur+=c;}}}if(cur.length||row.length){row.push(cur);rows.push(row);}return rows;}
     function idx(h,keys){for(var k=0;k<keys.length;k++)for(var j=0;j<h.length;j++)if(h[j].indexOf(keys[k])>=0)return j;return -1;}
     function toEntries(text){var g=parseCSV(text);if(!g.length)return [];var h=g[0].map(function(s){return (s||'').trim().toLowerCase();});var iN=idx(h,['name']),iP=idx(h,['paper','title']),iL=idx(h,['url','link','doi']),iD=idx(h,['date']),iA=idx(h,['author']),iV=idx(h,['journal','venue']),iS=idx(h,['summary']);var st=1;if(iN<0){iN=0;iP=1;st=0;}function get(row,i){return i>=0?(row[i]||'').trim():'';}var out=[];for(var r=st;r<g.length;r++){var row=g[r]||[];var nm=get(row,iN);if(!nm)continue;out.push({name:nm,paper:get(row,iP),link:get(row,iL),date:get(row,iD),author:get(row,iA),venue:get(row,iV),summary:get(row,iS)});}return out;}
-    function board(e){var m={},o=[];e.forEach(function(x){var k=x.name.toLowerCase();if(!m[k]){m[k]={name:x.name,n:0};o.push(k);}m[k].n++;});return o.map(function(k){return m[k];}).sort(function(a,b){return b.n-a.n || a.name.localeCompare(b.name);});}
-    function renderLB(rows){lb.innerHTML='';if(!rows.length){lb.innerHTML='<p class="lb-loading">No entries yet.</p>';return;}var tier=0,prev=null;rows.forEach(function(r){if(r.n!==prev){tier++;prev=r.n;}var key=r.name.trim().split(/\s+/)[0].toLowerCase(),pic=PHOTOS[key];var ph=pic?'<span class="lb-pic"><img src="'+pic+'" alt=""></span>':'<span class="lb-pic">'+esc(initials(r.name))+'</span>';var top=tier<=3;var rank=top?medals[tier-1]:tier;var d=document.createElement('div');d.className='lb-row'+(top?' lb-top':'');d.innerHTML='<span class="lb-rank">'+rank+'</span>'+ph+'<span class="lb-name">'+esc(r.name)+'</span><span class="lb-count">'+r.n+' <small>papers</small></span>';lb.appendChild(d);});}
+    function monthKey(dstr){var tt=Date.parse(dstr);if(isNaN(tt))return null;var d=new Date(tt);return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2);}
+    function labelFor(k){var p=k.split('-');return MONTHS[parseInt(p[1],10)-1]+' '+p[0];}
+    function board(e,curKey){var m={},o=[];e.forEach(function(x){var k=x.name.toLowerCase();if(!m[k]){m[k]={name:x.name,n:0,total:0};o.push(k);}m[k].total++;if(monthKey(x.date)===curKey)m[k].n++;});return o.map(function(k){return m[k];}).filter(function(r){return r.n>0;}).sort(function(a,b){return b.n-a.n || b.total-a.total || a.name.localeCompare(b.name);});}
+    function renderLB(rows){lb.innerHTML='';if(!rows.length){lb.innerHTML='<p class="lb-loading">No papers logged yet this month.</p>';return;}var tier=0,prev=null;rows.forEach(function(r){if(r.n!==prev){tier++;prev=r.n;}var top=tier<=3;var rank=top?medals[tier-1]:tier;var d=document.createElement('div');d.className='lb-row'+(top?' lb-top':'');d.innerHTML='<span class="lb-rank">'+rank+'</span>'+pic(r.name,'lb-pic')+'<span class="lb-name">'+esc(r.name)+'</span><span class="lb-count">'+r.n+' <small>papers</small> <small class="lb-total">('+r.total+' total)</small></span>';lb.appendChild(d);});}
+    function monthlyChamps(e,curKey){var bm={};e.forEach(function(x){var key=monthKey(x.date);if(!key||key===curKey)return;if(!bm[key])bm[key]={};bm[key][x.name]=(bm[key][x.name]||0)+1;});return Object.keys(bm).sort().reverse().map(function(k){var c=bm[k],max=0,cs=[];Object.keys(c).forEach(function(nm){if(c[nm]>max){max=c[nm];cs=[nm];}else if(c[nm]===max){cs.push(nm);}});cs.sort(function(a,b){return a.localeCompare(b);});return {label:labelFor(k),champs:cs,n:max};});}
+    function renderChampions(e,curKey){if(!ce)return;var rows=monthlyChamps(e,curKey);ce.innerHTML='';if(!rows.length){ce.innerHTML='<p class="lb-loading">No completed months yet.</p>';return;}rows.forEach(function(r){var pics=r.champs.map(function(nm){return pic(nm,'ch-pic');}).join('');var d=document.createElement('div');d.className='ch-row';d.innerHTML='<span class="ch-month">'+esc(r.label)+'</span><span class="ch-pics">'+pics+'</span><span class="ch-name">'+esc(r.champs.join(', '))+'</span><span class="ch-n">'+r.n+' <small>papers</small></span>';ce.appendChild(d);});}
     function renderPapers(e){if(!pl)return;var it=e.filter(function(x){return x.paper;});it.sort(function(a,b){var da=Date.parse(a.date)||0,db=Date.parse(b.date)||0;if(da||db)return db-da;return (b.date||'').localeCompare(a.date||'');});pl.innerHTML='';if(!it.length){pl.innerHTML='<p class="lb-loading">No papers logged yet.</p>';return;}it.forEach(function(x){var d=document.createElement('div');d.className='pl-item';var title=x.link?('<a href="'+esc(x.link)+'">'+esc(x.paper)+'</a>'):esc(x.paper);var bits=[];if(x.author)bits.push(esc(x.author));if(x.venue)bits.push(esc(x.venue));bits.push('read by '+esc(x.name));if(x.date)bits.push(esc(x.date));var html='<div class="pl-title">'+title+'</div><div class="pl-meta">'+bits.join(' · ')+'</div>';if(x.summary)html+='<div class="pl-sum">'+esc(x.summary)+'</div>';d.innerHTML=html;pl.appendChild(d);});}
-    function render(e){renderLB(board(e));renderPapers(e);}
-    var sample=[{name:'Lena',paper:'CONTENT: multi-context genetic modeling of transcriptional regulation',link:'https://doi.org/10.1038/s41467-022-33212-0',date:'2026-07-20',author:'Thompson et al. 2022',venue:'Nature Communications',summary:'Splits the genetic component of expression into context-shared and context-specific parts to boost TWAS power. Recovers disease genes missed by single-context analyses. Applied across 22 complex traits.'},{name:'Lena',paper:'Fine-mapping in single-cell eQTL studies',link:'',date:'2026-07-14',author:'',venue:'',summary:''},{name:'Lena',paper:'Trans-eQTL mapping at scale',link:'',date:'2026-07-08',author:'',venue:'',summary:''},{name:'Karen',paper:'SuSiE: sum of single effects for fine-mapping',link:'',date:'2026-07-18',author:'Wang et al. 2020',venue:'JRSS-B',summary:'A variational method for fine-mapping that yields interpretable credible sets. Scales to many variants. Widely used for eQTL and GWAS fine-mapping.'},{name:'Karen',paper:'Bayesian variable selection in regression',link:'',date:'2026-07-05',author:'',venue:'',summary:''},{name:'Karen',paper:'Colocalization methods, a review',link:'',date:'2026-06-30',author:'',venue:'',summary:''},{name:'Amaan',paper:'Single-cell multiome analysis of reprogramming',link:'',date:'2026-07-16',author:'',venue:'',summary:''},{name:'Amaan',paper:'ATAC-seq peak calling methods',link:'',date:'2026-07-02',author:'',venue:'',summary:''},{name:'Tim',paper:'Epigenetic clocks and biological aging',link:'',date:'2026-07-12',author:'',venue:'',summary:''},{name:'Bruna',paper:'FastGxC: context-specific eQTL mapping',link:'https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00112-6',date:'2026-07-10',author:'Krockenberger et al. 2025',venue:'Cell Genomics',summary:''}];
-    if(SHEET.indexOf('http')!==0){render(sample);return;}
+    function render(e){var now=new Date();var curKey=now.getFullYear()+'-'+('0'+(now.getMonth()+1)).slice(-2);renderLB(board(e,curKey));renderChampions(e,curKey);renderPapers(e);}
+    var sample=[{name:'Lena',paper:'CONTENT: multi-context genetic modeling of transcriptional regulation',link:'https://doi.org/10.1038/s41467-022-33212-0',date:'',author:'Thompson et al. 2022',venue:'Nature Communications',summary:'Splits the genetic component of expression into context-shared and context-specific parts to boost TWAS power. Recovers disease genes missed by single-context analyses. Applied across 22 complex traits.'},{name:'Lena',paper:'Fine-mapping in single-cell eQTL studies',link:'',date:'',author:'',venue:'',summary:''},{name:'Lena',paper:'Trans-eQTL mapping at scale',link:'',date:'',author:'',venue:'',summary:''},{name:'Karen',paper:'SuSiE: sum of single effects for fine-mapping',link:'',date:'',author:'Wang et al. 2020',venue:'JRSS-B',summary:'A variational method for fine-mapping that yields interpretable credible sets. Scales to many variants. Widely used for eQTL and GWAS fine-mapping.'},{name:'Karen',paper:'Bayesian variable selection in regression',link:'',date:'',author:'',venue:'',summary:''},{name:'Karen',paper:'Colocalization methods, a review',link:'',date:'',author:'',venue:'',summary:''},{name:'Amaan',paper:'Single-cell multiome analysis of reprogramming',link:'',date:'',author:'',venue:'',summary:''},{name:'Amaan',paper:'ATAC-seq peak calling methods',link:'',date:'',author:'',venue:'',summary:''},{name:'Tim',paper:'Epigenetic clocks and biological aging',link:'',date:'',author:'',venue:'',summary:''},{name:'Bruna',paper:'FastGxC: context-specific eQTL mapping',link:'https://www.cell.com/cell-genomics/fulltext/S2666-979X(26)00112-6',date:'',author:'Krockenberger et al. 2025',venue:'Cell Genomics',summary:''}];
+    if(SHEET.indexOf('http')!==0){var now=new Date();function iso(back,day){var d=new Date(now.getFullYear(),now.getMonth()-back,day);return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}var plan=[0,0,0,0,1,1,0,0,0,1];sample.forEach(function(x,i){x.date=iso(plan[i],5+i);});render(sample);return;}
     fetch(SHEET).then(function(r){return r.text();}).then(function(x){render(toEntries(x));}).catch(function(){render([]);});
   })();
 </script>
